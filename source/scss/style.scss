@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body {
-	background: url('fone.jpg');
+	background: url('colors-fone.jpg');
 	background-size: 20%;
 	height: 2000px;
 }
@@ -99,28 +99,142 @@ body {
 	padding: 0 15% 0 8%;
 }
 
-.home__content {
-	background-color: rgba(196, 229, 235, 0.8);
+.home-style {
 	box-shadow: 0px 15px 100px #000;
-	border: 2px solid rgba(11, 11, 11, 0.4);
-	border-radius: 5%;
+	border: 1px solid rgba(100, 100, 100, 0.6);
+	border-radius: 25px;
 	margin: 5% 10% 0 10%;
 	padding: 100px 0 100px 0;
+}
+
+.home__content {
+	background-color: rgba(118, 200, 147, 1);
 	.content {
 		.banner__school {
+			display: flex;
+			justify-content: space-between;
 			.banner-img {
 				img {
-					max-width: 60%;
+					max-width: 90%;
 					border-radius: 4%;
 					transition-duration: 0.5s;
+					border: 6px solid #fff;
 				}
 				@media (min-width: 1000px) {
 					img:hover {
 						transition-duration: 0.5s;
-						max-width: 62%;
+						max-width: 92%;
 					}
+				}
+			}
+			.banner-info {
+				flex: 1 1 60%;
+				font-family: "Bitter", sans-serif;
+				color: #eee;
+				h2 {
+					font-size: calc(9px + 31 * (100vw / 1400));
+					font-weight: 600;
+					margin-bottom: 6%;
+				}
+				p {
+					font-size: calc(9px + 13 * (100vw / 1400));
+					line-height: 1.1;
 				}
 			}
 		}
 	}
 }
+
+.home-slider {
+	background-color: rgba(153, 217, 140, 1);
+	.slider {
+		overflow: hidden;
+		padding-bottom: 10%;
+		position: relative;
+		.slider-item {
+			text-align: center;
+			img {
+				width: 80%;
+				border: 4px solid rgb(179, 241, 197);
+				border-radius: 10%;
+			}
+		}
+		.slick-track{
+			display: flex;
+			background-color: #e3ffeb;
+			overflow: hidden;
+			padding: 5% 0 5% 0;
+		}
+		.slick-list {
+			position: relative;
+			max-width: 90%;
+			margin: 0 auto;
+			overflow: hidden;
+			border-radius: 15px;
+			border: 4px solid rgb(179, 241, 197);
+		}
+		.slick-arrow.slick-prev{
+			position: absolute;
+			bottom: 0%;
+			left: 10%;
+			background: url("arrow-left.png") 50% 0 / 100% 100% no-repeat;
+		}
+		.slick-arrow.slick-next{
+			position: absolute;
+			bottom: 0;
+			right: 10%;
+			background: url("arrow-right.png") 50% 0 / 100% 100% no-repeat;
+		}
+		.slick-arrow{
+			z-index: 5;
+			font-size: 0;
+			width: 7.5%;
+			height: 21%;
+		}
+		.slick-dots{
+			display: flex;
+			position: absolute;
+			bottom: 5%;
+			left: 40%;
+			li {
+				padding: 0 5%;
+				button {
+					font-size: 0;
+					width: 20px;
+					height: 20px;
+					background: url("dots.png") 0 0 / contain;
+				}
+			}
+		}
+		.slick-dots li.slick-active button{
+			background: url("dots-active.png") 0 0 / contain;
+		}
+	}
+}
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+/* Лента слайдов */
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
