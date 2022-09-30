@@ -38,8 +38,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body {
-	background: url('colors-fone.jpg');
-	background-size: 20%;
+	background: url('fone.jpg');
+	background-size: 25%;
 	height: 2000px;
 }
 
@@ -53,6 +53,10 @@ body {
 	height: 120px;
 	background-color: #343a40;
 	border-bottom: 1px #000 solid;
+	// position: fixed;
+	// width: 100%;
+	// top: 0;
+	// z-index: 5;
 	.header__menu {
 		display: flex;
 		.header__logo {
@@ -96,39 +100,55 @@ body {
 }
 
 .home__wrapper {
-	padding: 0 15% 0 8%;
+	padding: 0 8% 0 8%;
 }
 
 .home-style {
 	box-shadow: 0px 15px 100px #000;
 	border: 1px solid rgba(100, 100, 100, 0.6);
 	border-radius: 25px;
-	margin: 5% 10% 0 10%;
+	margin: 5% 6% 0 6%;
 	padding: 100px 0 100px 0;
 }
 
 .home__content {
-	background-color: rgba(118, 200, 147, 1);
+	background-color: #a3d0d2;
+	// margin-top: 12%;
 	.content {
 		.banner__school {
 			display: flex;
-			justify-content: space-between;
-			.banner-img {
-				img {
-					max-width: 90%;
-					border-radius: 4%;
-					transition-duration: 0.5s;
-					border: 6px solid #fff;
-				}
-				@media (min-width: 1000px) {
-					img:hover {
-						transition-duration: 0.5s;
-						max-width: 92%;
+			min-width: 0;
+			
+			.home__content-slider {
+				.home__content-slider__item {
+					text-align: center;
+					padding: 1% 1%;
+					img {
+						max-width: 100%;
+						border-radius: 10px;
 					}
 				}
+				.slick-track {
+					display: flex;
+					background-color: #c3d0d2;
+					border-radius: 15px;
+				}
+				.slick-list {
+					position: relative;
+					max-width: 80%;
+					margin: 0 auto;
+					overflow: hidden;
+					border-radius: 15px;
+					border: 5px solid #fff;
+				}
+			}
+			.banner-slider {
+				min-width: 0;
+				flex: 1 1 50%;
+				align-self: center;
 			}
 			.banner-info {
-				flex: 1 1 60%;
+				flex: 1 1 50%;
 				font-family: "Bitter", sans-serif;
 				color: #eee;
 				h2 {
@@ -142,21 +162,112 @@ body {
 				}
 			}
 		}
+		.home__content-animation {
+			padding: 7% 0 0 0;
+			height: 210px;
+			.arrow-animation {
+				text-align: center;
+				animation-name: arrow-animation;
+				animation-duration: 0.8s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+				img {
+					max-width: 8%;
+				}
+			}
+		}
+	}
+}
+
+@keyframes arrow-animation{
+	0% {
+		top: 0;
+	}
+	50% {
+
+	}
+	100% {
+		margin-top: 100px;
 	}
 }
 
 .home-slider {
-	background-color: rgba(153, 217, 140, 1);
+	background-color: #a9d8a5;
+	.slider-heading {
+		text-align: center;
+		padding-bottom: 5%;
+		font-family: "Bitter", sans-serif;
+		text-transform: uppercase;
+		font-size: calc(9px + 29 * (100vw / 1400));
+		padding-bottom: 5%;
+		color: #eee;
+		h2 {
+			font-weight: 900;
+			position: relative;
+
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				width: 3%;
+				height: 100%;
+				background-color: #fff;
+				border-radius: 60% 15%
+				// background: url('slider-icon-heading.png') 0 0 / contain no-repeat;
+			}
+			&::before {
+				left: 30%
+			}
+			&::after {
+				right: 30%
+			}
+		}
+	}
 	.slider {
 		overflow: hidden;
 		padding-bottom: 10%;
 		position: relative;
 		.slider-item {
 			text-align: center;
-			img {
-				width: 80%;
-				border: 4px solid rgb(179, 241, 197);
-				border-radius: 10%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.slider-icon {
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				position: relative;
+				margin-bottom: 5%;
+				img {
+					max-width: 8%;
+					align-self: flex-end;
+					padding-bottom: 10%;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 20%;
+					height: 4px;
+					background-color: #aad1b7;
+				}
+			}
+			.slider-text {
+				height: 100px;
+				max-width: 80%;
+				margin: 0 auto;
+				font-family: "Bitter", sans-serif;
+				color: #333;
+				font-weight: 500;
+				h2 {
+					text-transform: uppercase;
+					font-size: calc(9px + 14 * (100vw / 1400));
+					font-weight: 600;
+					padding-bottom: 5%;
+				}
+				p {
+					font-size: calc(6px + 10 * (100vw / 1400));
+				}
 			}
 		}
 		.slick-track{
@@ -177,13 +288,13 @@ body {
 			position: absolute;
 			bottom: 0%;
 			left: 10%;
-			background: url("arrow-left.png") 50% 0 / 100% 100% no-repeat;
+			background: url("green-arrow-left.png") 50% 0 / 100% 100% no-repeat;
 		}
 		.slick-arrow.slick-next{
 			position: absolute;
 			bottom: 0;
 			right: 10%;
-			background: url("arrow-right.png") 50% 0 / 100% 100% no-repeat;
+			background: url("green-arrow-right.png") 50% 0 / 100% 100% no-repeat;
 		}
 		.slick-arrow{
 			z-index: 5;

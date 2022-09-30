@@ -16,3 +16,16 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 	});
 });
+
+$(document).ready(function(){
+	$('.home__content-slider').slick({
+		dots: false,
+		arrows: false,
+		autoplay: true,
+		speed: 1000,
+		autoplaySpeed: 2000,
+		pauseOnHover: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+});
