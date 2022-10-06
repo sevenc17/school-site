@@ -53,6 +53,7 @@ body {
 	height: 120px;
 	background-color: #343a40;
 	border-bottom: 1px #000 solid;
+	z-index: 4;
 	// position: fixed;
 	// width: 100%;
 	// top: 0;
@@ -99,14 +100,17 @@ body {
 					}
 					.list__sub-menu {
 						display: none;
+						transition-duration: 1s;
 						position: absolute;
-						width: 100%;
+						width: 150%;
 						top: 100%;
 						left: 0%;
-						background-color: #888;
-						
+						background-color: #ccc;
+						border-radius: 5px;
+						z-index: 5;
 						li {
 							margin-top: 3%;
+							padding: 2% 0 2% 2%;
 						}
 					}
 				}
@@ -159,7 +163,7 @@ body {
 			width: 3%;
 			height: 100%;
 			background-color: #fff;
-			border-radius: 60% 15%
+			border-radius: 60% 5%
 			// background: url('slider-icon-heading.png') 0 0 / contain no-repeat;
 		}
 		&::before {
@@ -197,6 +201,7 @@ body {
 	padding: 4% 0% 8% 0%;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
+	z-index: 4;
 	.content {
 		.banner__school {
 			display: flex;
@@ -300,7 +305,7 @@ body {
 				position: relative;
 				margin-bottom: 5%;
 				img {
-					max-width: 8%;
+					max-width: 9%;
 					align-self: flex-end;
 					padding-bottom: 10%;
 				}
@@ -356,13 +361,13 @@ body {
 			position: absolute;
 			bottom: 0%;
 			left: 10%;
-			background: url("green-arrow-left.png") 50% 0 / 100px 100px  no-repeat;
+			background: url("green-arrow-left.png") 0% 100% / contain no-repeat;
 		}
 		.slick-arrow.slick-next{
 			position: absolute;
 			bottom: 0;
 			right: 10%;
-			background: url("green-arrow-right.png") 50% 0 / 100% 100% no-repeat;
+			background: url("green-arrow-right.png") 0% 100% / contain no-repeat;
 		}
 		.slick-arrow{
 			z-index: 5;

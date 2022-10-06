@@ -88,6 +88,7 @@ body {
   height: 120px;
   background-color: #343a40;
   border-bottom: 1px #000 solid;
+  z-index: 4;
 }
 .header .header__menu {
   display: -webkit-box;
@@ -147,14 +148,19 @@ body {
 }
 .header .header__menu .list-menu .list li .list__sub-menu {
   display: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   position: absolute;
-  width: 100%;
+  width: 150%;
   top: 100%;
   left: 0%;
-  background-color: #888;
+  background-color: #ccc;
+  border-radius: 5px;
+  z-index: 5;
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
   margin-top: 3%;
+  padding: 2% 0 2% 2%;
 }
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
@@ -202,7 +208,7 @@ body {
   width: 3%;
   height: 100%;
   background-color: #fff;
-  border-radius: 60% 15%;
+  border-radius: 60% 5%;
 }
 .title h1::before {
   left: 22%;
@@ -238,6 +244,7 @@ body {
   padding: 4% 0% 8% 0%;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  z-index: 4;
 }
 .home__content .content .banner__school {
   display: -webkit-box;
@@ -370,7 +377,7 @@ body {
   }
 }
 .home-slider .slider .slider-item .slider-icon img {
-  max-width: 8%;
+  max-width: 9%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding-bottom: 10%;
@@ -429,13 +436,13 @@ body {
   position: absolute;
   bottom: 0%;
   left: 10%;
-  background: url("green-arrow-left.png") 50% 0/100px 100px no-repeat;
+  background: url("green-arrow-left.png") 0% 100%/contain no-repeat;
 }
 .home-slider .slider .slick-arrow.slick-next {
   position: absolute;
   bottom: 0;
   right: 10%;
-  background: url("green-arrow-right.png") 50% 0/100% 100% no-repeat;
+  background: url("green-arrow-right.png") 0% 100%/contain no-repeat;
 }
 .home-slider .slider .slick-arrow {
   z-index: 5;

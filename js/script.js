@@ -23,8 +23,9 @@ $(document).ready(function(){
 		arrows: false,
 		autoplay: true,
 		speed: 1000,
-		autoplaySpeed: 2000,
-		pauseOnHover: false,
+		autoplaySpeed: 1500,
+		pauseOnHover: true,
+		pauseOnFocus: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	});
