@@ -30,3 +30,20 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 	});
 });
+
+const listBurger = document.querySelector('.list-burger');
+const listMenu = document.querySelector('.list-menu');
+const documentBody = document.querySelector('body')
+
+listBurger.addEventListener('click', function(event){
+
+	if (listBurger.classList.contains('list-burger-active')) {
+		listBurger.classList.remove('list-burger-active');
+		listMenu.classList.remove('list-menu-active');
+		documentBody.classList.remove('__list-burger-active')
+	} else {
+		listBurger.classList.add('list-burger-active');
+		listMenu.classList.add('list-menu-active');
+		documentBody.classList.add('__list-burger-active');
+	}
+});
