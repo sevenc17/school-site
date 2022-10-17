@@ -655,5 +655,40 @@ body.__list-burger-active {
   .header .header__menu .list-menu-active .list {
     display: block;
     padding: 30% 0 0 20%;
+    font-size: calc(9px + 1.4285714286vw);
+    z-index: 10;
+  }
+  .header .header__menu .list-menu-active .list a {
+    font-size: calc(9px + 1.4285714286vw);
+  }
+  .header .header__menu .list-menu-active .list li {
+    display: block;
+    padding: 2% 0;
+  }
+  @-webkit-keyframes opacity-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      left: 35%;
+    }
+  }
+  @keyframes opacity-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      left: 35%;
+    }
+  }
+  .header .header__menu .list-menu-active .list li .list__sub-menu {
+    top: 0;
+    left: 40%;
+    width: 50%;
+  }
+  .header .header__menu .list-menu-active .list li .list__sub-menu li {
+    padding: 2% 2%;
   }
 }
