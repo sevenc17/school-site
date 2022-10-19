@@ -341,118 +341,49 @@ body.__list-burger-active {
   padding: 100px 0 100px 0;
 }
 
-.home__content {
-  background-color: #a3d0d2;
+.our-teachers {
   margin: 0;
-  border: 0;
-  padding: 4% 0% 8% 0%;
-  border-top-right-radius: 0;
+  padding: 8% 8%;
   border-top-left-radius: 0;
-  z-index: 4;
+  border-top-right-radius: 0;
+  background-color: #e2dd8d;
+  color: #fff;
 }
-.home__content .content .banner__school {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 0;
-}
-.home__content .content .banner__school .home__content-slider .home__content-slider__item {
-  text-align: center;
-  padding: 1% 1%;
-}
-.home__content .content .banner__school .home__content-slider .home__content-slider__item img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-.home__content .content .banner__school .home__content-slider .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #c3d0d2;
-  border-radius: 15px;
-}
-.home__content .content .banner__school .home__content-slider .slick-list {
-  position: relative;
-  max-width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 15px;
-  border: 5px solid #fff;
-}
-.home__content .content .banner__school .banner-slider {
-  min-width: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-.home__content .content .banner__school .banner-info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+.our-teachers .title {
+  color: #fff;
   font-family: "Bitter", sans-serif;
-  color: #eee;
 }
-.home__content .content .banner__school .banner-info h2 {
-  font-size: calc(9px + 2.2142857143vw);
-  font-weight: 600;
-  margin-bottom: 6%;
+.our-teachers .teacher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #646463;
+  font-size: calc(9px + 1.0714285714vw);
+  padding: 0 0 10% 0;
 }
-.home__content .content .banner__school .banner-info p {
-  font-size: calc(9px + 0.9285714286vw);
-  line-height: 1.1;
-  font-weight: 700;
+.our-teachers .teacher .teacher-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
-.home__content .content .home__content-animation {
-  padding: 4% 0 8% 0;
-  height: 100px;
+.our-teachers .teacher .teacher-img img {
+  max-width: 100%;
+  border-radius: 5%;
+  border: 8px solid #fefab8;
+  margin: 0 0 7% 0;
 }
-.home__content .content .home__content-animation .arrow-animation {
-  text-align: center;
-  -webkit-animation-name: arrow-animation;
-          animation-name: arrow-animation;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+.our-teachers .teacher .teacher-img .sub-info {
+  line-height: 1.2;
 }
-.home__content .content .home__content-animation .arrow-animation img {
-  max-width: 8%;
-}
-
-@-webkit-keyframes arrow-animation {
-  0% {
-    top: 0;
-  }
-  100% {
-    margin-top: 5%;
-  }
-}
-
-@keyframes arrow-animation {
-  0% {
-    top: 0;
-  }
-  100% {
-    margin-top: 5%;
-  }
-}
-.home-slider {
-  background-color: #a9d8a5;
-}
-.home-slider .slider {
-  overflow: hidden;
-  padding-bottom: 10%;
-  position: relative;
-}
-.home-slider .slider .slider-item {
-  text-align: center;
+.our-teachers .teacher .about-teacher {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  font-size: calc(9px + 1.0714285714vw);
+  line-height: 1.4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,129 +391,9 @@ body.__list-burger-active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.home-slider .slider .slider-item .slider-icon {
-  height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  margin-bottom: 5%;
-}
-@media (min-width: 1800px) {
-  .home-slider .slider .slider-item .slider-icon {
-    height: 200px;
-  }
-}
-.home-slider .slider .slider-item .slider-icon img {
-  max-width: 9%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding-bottom: 10%;
-}
-.home-slider .slider .slider-item .slider-icon::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 20%;
-  height: 4px;
-  background-color: #aad1b7;
-}
-.home-slider .slider .slider-item .slider-text {
-  height: 100px;
-  max-width: 90%;
-  margin: 0 auto;
-  font-family: "Bitter", sans-serif;
-  color: #333;
-  font-weight: 500;
-}
-@media (min-width: 1500px) {
-  .home-slider .slider .slider-item .slider-text {
-    height: calc(100px + 5%);
-  }
-}
-.home-slider .slider .slider-item .slider-text h2 {
-  text-transform: uppercase;
-  font-size: calc(9px + 1vw);
-  font-weight: 600;
-  padding-bottom: 4%;
-}
-.home-slider .slider .slider-item .slider-text p {
-  font-size: calc(6px + 0.6428571429vw);
-}
-.home-slider .slider .slider-item .slider-text a {
-  color: #52b69a;
-  text-decoration: underline;
-}
-.home-slider .slider .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #e3ffeb;
-  overflow: hidden;
-  padding: 5% 0 5% 0;
-}
-.home-slider .slider .slick-list {
-  position: relative;
-  max-width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 15px;
-  border: 4px solid rgb(179, 241, 197);
-}
-.home-slider .slider .slick-arrow.slick-prev {
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
-  background: url("green-arrow-left.png") 0% 100%/contain no-repeat;
-}
-.home-slider .slider .slick-arrow.slick-prev.green-arrow-left-active {
-  background-image: url("green-arrow-left-active.png");
-}
-.home-slider .slider .slick-arrow.slick-next.green-arrow-right-active {
-  background-image: url("green-arrow-right-active.png");
-}
-.home-slider .slider .slick-arrow.slick-next {
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  background: url("green-arrow-right.png") 0% 100%/contain no-repeat;
-}
-.home-slider .slider .slick-arrow {
-  display: block;
-  z-index: 5;
-  font-size: 0;
-  width: 7.5%;
-  height: 21%;
-}
-.home-slider .slider .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.home-slider .slider .slick-dots li {
-  padding: 0 1%;
-}
-.home-slider .slider .slick-dots li button {
-  font-size: 0;
-  height: calc(6px + 1.2142857143vw);
-  width: calc(6px + 1.2142857143vw);
-  background: url("dots.png") 0 0/contain;
-}
-.home-slider .slider .slick-dots li.slick-active button {
-  background: url("dots-active.png") 0 0/contain;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .footer {
@@ -606,48 +417,34 @@ body.__list-burger-active {
 /* Активная точка */
 /* Элемент точки */
 @media (max-width: 900px) {
-  .home__content .content .banner__school {
-    display: block;
+  .our-teachers .title {
+    color: #fff;
+    font-family: "Bitter", sans-serif;
   }
-  .home__content .content .banner__school .banner-slider {
-    margin-bottom: 7%;
+  .our-teachers .title h1::before {
+    left: 10%;
+    width: 5%;
   }
-  .home__content .content .banner__school .banner-slider .home__content-slider {
-    margin: 0 auto;
-    max-width: 70%;
+  .our-teachers .title h1::after {
+    right: 10%;
+    width: 5%;
   }
-  .home__content .content .banner__school .banner-info {
+  .our-teachers .teacher {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our-teachers .teacher .teacher-img {
     text-align: center;
+    padding-bottom: 5%;
   }
-
-  .home-slider {
-    padding: 10% 0;
+  .our-teachers .teacher .teacher-img img {
+    max-width: 50%;
   }
-  .home-slider .title h2 {
-    font-size: calc(9px + 1.4285714286vw);
-  }
-  .home-slider .title h2::before, .home-slider .title h2::after {
-    width: 2.5%;
-    height: 90%;
-  }
-  .home-slider .slider .slider-item .slider-icon {
-    height: 50px;
-  }
-  .home-slider .slider .slider-item .slider-text {
-    height: 75px;
-  }
-  .home-slider .slider .slider-item .slider-text h2 {
-    text-transform: uppercase;
-    font-size: calc(9px + 0.7857142857vw);
-    font-weight: 600;
-    padding-bottom: 4%;
-  }
-  .home-slider .slider .slider-item .slider-text p {
-    font-size: calc(6px + 0.5vw);
-  }
-  .home-slider .slider .slick-arrow {
-    width: 9.5%;
-    height: 24%;
+  .our-teachers .teacher .about-teacher {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
@@ -751,57 +548,5 @@ body.__list-burger-active {
   }
   .header .header__menu .list-menu.list-menu-active .list li .list__sub-menu li {
     padding: 2% 2%;
-  }
-
-  .home__content {
-    padding: 10% 0 0 0;
-  }
-  .home__content .content {
-    text-align: left;
-  }
-  .home__content .content .title h1 {
-    text-align: center;
-    margin-bottom: 10%;
-  }
-  .home__content .content .title h1::before {
-    left: 12%;
-    width: 5%;
-    height: 120%;
-  }
-  .home__content .content .title h1::after {
-    right: 12%;
-    width: 5%;
-    height: 120%;
-  }
-  .home__content .content .title p {
-    font-size: calc(9px + 1.4285714286vw);
-    margin: 0;
-    text-align: left;
-  }
-  .home__content .content .title h2::before {
-    left: 6%;
-    width: 5%;
-    height: 120%;
-  }
-  .home__content .content .title h2::after {
-    right: 6%;
-    width: 5%;
-    height: 120%;
-  }
-  .home__content .content .banner__school {
-    display: block;
-  }
-  .home__content .content .banner__school .banner-slider {
-    margin-bottom: 7%;
-  }
-  .home__content .content .banner__school .banner-slider .home__content-slider {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-  .home__content .content .banner__school .banner-info {
-    text-align: left;
-  }
-  .home__content .content .home__content-animation {
-    height: 130px;
   }
 }
