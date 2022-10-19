@@ -1,18 +1,24 @@
-let mediaQuery = window.matchMedia('(max-width: 1350px)')
+let mediaQuery1 = window.matchMedia('(max-width: 1350px)');
+let mediaQuery2 = window.matchMedia('(max-width: 768px)');
+let mediaQuery = 0;
 
 function media() {
-	if (mediaQuery.matches) {
-  		mediaQuery = 3;
-	};
-	return mediaQuery;
+	
+	if (mediaQuery2.matches) {
+  		let mediaQuery = 2;
+  		return mediaQuery;
+	} else {
+		let mediaQuery = 3;
+		return mediaQuery;
+	}
 }
 
-media();
+media()
 
 $(document).ready(function(){
 	$('.slider').slick({
 		dots: true,
-		slidesToShow: 3,
+		slidesToShow: media(),
 		slidesToScroll: 1,
 	});
 });
@@ -42,7 +48,7 @@ listBurger.addEventListener('click', function(event){
 		listBurger.classList.remove('list-burger-active');
 		listMenu.classList.remove('list-menu-active');
 		documentBody.classList.remove('__list-burger-active')
-	} else if (listBurger.classList.contains('list-burger-active') == false){
+	} else {
 		listBurger.classList.add('list-burger-active');
 		listMenu.classList.add('list-menu-active');
 		documentBody.classList.add('__list-burger-active');

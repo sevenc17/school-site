@@ -607,6 +607,36 @@ body.__list-burger-active {
   .home__content .content .banner__school .banner-info {
     text-align: center;
   }
+
+  .home-slider {
+    padding: 10% 0;
+  }
+  .home-slider .title h2 {
+    font-size: calc(9px + 1.4285714286vw);
+  }
+  .home-slider .title h2::before, .home-slider .title h2::after {
+    width: 2.5%;
+    height: 90%;
+  }
+  .home-slider .slider .slider-item .slider-icon {
+    height: 50px;
+  }
+  .home-slider .slider .slider-item .slider-text {
+    height: 75px;
+  }
+  .home-slider .slider .slider-item .slider-text h2 {
+    text-transform: uppercase;
+    font-size: calc(9px + 0.7857142857vw);
+    font-weight: 600;
+    padding-bottom: 4%;
+  }
+  .home-slider .slider .slider-item .slider-text p {
+    font-size: calc(6px + 0.5vw);
+  }
+  .home-slider .slider .slick-arrow {
+    width: 9.5%;
+    height: 24%;
+  }
 }
 @media (max-width: 768px) {
   .header__wrapper {
