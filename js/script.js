@@ -54,3 +54,24 @@ listBurger.addEventListener('click', function(event){
 		documentBody.classList.add('__list-burger-active');
 	}
 });
+
+const greenArrowRightActive = document.querySelector('.slick-arrow.slick-next');
+const greenArrowLeftActive = document.querySelector('.slick-prev');
+
+console.log(greenArrowLeftActive)
+
+document.addEventListener('mousedown', function(event){
+	if (event.target.classList.contains('slick-prev')) {
+		event.target.classList.add('green-arrow-left-active')
+	} else if (event.target.classList.contains('slick-next')) {
+		event.target.classList.add('green-arrow-right-active')
+	}
+});
+
+document.addEventListener('click', function(event){
+	if (event.target.classList.contains('slick-prev')) {
+		event.target.classList.remove('green-arrow-left-active')
+	} else if (event.target.classList.contains('slick-next')) {
+		event.target.classList.remove('green-arrow-right-active')
+	}
+});
