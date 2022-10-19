@@ -75,3 +75,19 @@ document.addEventListener('click', function(event){
 		event.target.classList.remove('green-arrow-right-active')
 	}
 });
+
+document.addEventListener('touchstart', function(event){
+	if (event.target.classList.contains('slick-prev')) {
+		event.target.classList.add('green-arrow-left-active')
+	} else if (event.target.classList.contains('slick-next')) {
+		event.target.classList.add('green-arrow-right-active')
+	}
+});
+
+document.addEventListener('touched', function(event){
+	if (event.target.classList.contains('slick-prev')) {
+		event.target.classList.remove('green-arrow-left-active')
+	} else if (event.target.classList.contains('slick-next')) {
+		event.target.classList.remove('green-arrow-right-active')
+	}
+});
