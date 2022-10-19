@@ -586,7 +586,7 @@ body.__list-burger-active {
 }
 
 .footer {
-  height: 100px;
+  height: 80px;
   background-color: #343a40;
   margin-top: 5%;
 }
@@ -606,6 +606,14 @@ body.__list-burger-active {
 /* Активная точка */
 /* Элемент точки */
 @media (max-width: 900px) {
+  .home__content .content .title h1::before {
+    left: 10%;
+    width: 5%;
+  }
+  .home__content .content .title h1::after {
+    right: 10%;
+    width: 5%;
+  }
   .home__content .content .banner__school {
     display: block;
   }
@@ -624,11 +632,19 @@ body.__list-burger-active {
     padding: 10% 0;
   }
   .home-slider .title h2 {
-    font-size: calc(9px + 1.4285714286vw);
+    font-size: calc(9px + 1vw);
   }
   .home-slider .title h2::before, .home-slider .title h2::after {
     width: 2.5%;
     height: 90%;
+  }
+  .home-slider .title h2::before {
+    left: 16%;
+    width: 3.5%;
+  }
+  .home-slider .title h2::after {
+    right: 16%;
+    width: 3.5%;
   }
   .home-slider .slider .slider-item .slider-icon {
     height: 50px;
@@ -803,5 +819,36 @@ body.__list-burger-active {
   }
   .home__content .content .home__content-animation {
     height: 130px;
+  }
+
+  .home-slider {
+    padding: 10% 0;
+  }
+  .home-slider .title h2 {
+    font-size: calc(9px + 1vw);
+  }
+  .home-slider .title h2::before, .home-slider .title h2::after {
+    width: 2.5%;
+    height: 90%;
+  }
+  .home-slider .title h2::before {
+    left: 14%;
+    width: 3.5%;
+  }
+  .home-slider .title h2::after {
+    right: 14%;
+    width: 3.5%;
+  }
+  .home-slider .slider .slider-item .slider-text {
+    height: 75px;
+  }
+  .home-slider .slider .slider-item .slider-text h2 {
+    text-transform: uppercase;
+    font-size: calc(9px + 0.5vw);
+    font-weight: 600;
+    padding-bottom: 4%;
+  }
+  .home-slider .slider .slider-item .slider-text p {
+    font-size: calc(6px + 0.2857142857vw);
   }
 }

@@ -479,7 +479,7 @@ body.__list-burger-active{
 }
 
 .footer {
-	height: 100px;
+	height: 80px;
 	background-color: #343a40;
 	margin-top: 5%;
 }
@@ -515,6 +515,18 @@ body.__list-burger-active{
 @media (max-width: 900px) {
 	.home__content {
 		.content{
+			.title {
+				h1 {
+					&::before {
+						left: 10%;
+						width: 5%;
+					}
+					&::after {
+						right: 10%;
+						width: 5%;
+					}
+				}
+			}
 			.banner__school {
 				display: block;
 				.banner-slider {
@@ -534,10 +546,19 @@ body.__list-burger-active{
 		padding: 10% 0;
 		.title {
 			h2 {
-				font-size: calc(9px + 20 * (100vw / 1400));
+				font-size: calc(9px + 14 * (100vw / 1400));
 				&::before, &::after {
 					width: 2.5%;
 					height: 90%;
+				}
+				
+				&::before {
+					left: 16%;
+					width: 3.5%;
+				}
+				&::after {
+					right: 16%;
+					width: 3.5%;
 				}
 			}
 		}
@@ -703,6 +724,43 @@ body.__list-burger-active{
 			}
 			.home__content-animation {
 				height: 130px;
+			}
+		}
+	}
+	.home-slider {
+		padding: 10% 0;
+		.title {
+			h2 {
+				font-size: calc(9px + 14 * (100vw / 1400));
+				&::before, &::after {
+					width: 2.5%;
+					height: 90%;
+				}
+				
+				&::before {
+					left: 14%;
+					width: 3.5%;
+				}
+				&::after {
+					right: 14%;
+					width: 3.5%;
+				}
+			}
+		}
+		.slider {
+			.slider-item {
+				.slider-text {
+					height: 75px;
+					h2 {
+						text-transform: uppercase;
+						font-size: calc(9px + 7 * (100vw / 1400));
+						font-weight: 600;
+						padding-bottom: 4%;
+					}
+					p {
+						font-size: calc(6px + 4 * (100vw / 1400));
+					}
+				}
 			}
 		}
 	}
