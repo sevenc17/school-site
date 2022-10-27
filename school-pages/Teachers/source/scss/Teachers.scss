@@ -49,7 +49,7 @@ body.__list-burger-active{
 .page {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	height: 100vh
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
@@ -372,6 +372,101 @@ body.__list-burger-active{
 	}
 }
 
+.teachers__content {
+	margin: 5% 0 0 0;
+	padding: 8% 2%;
+	background-color: #70d6ff;
+	flex: 1;
+	.wrapper {
+		padding-bottom: auto;
+	}
+	.teachers__content-title {
+		text-align: center;
+		.list-title {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 15%;
+		}
+		h2 {
+			font-size: calc(9px + 30 * (100vw / 1400));
+			font-family: "Bitter", sans-serif;
+			font-weight: 700;
+			color: #c5d8e7;
+			display: inline-block;
+			align-self: center;
+		}
+		p {
+
+		}
+		img {
+			max-width: 10%;
+			align-self: center;
+		}
+	}
+	.teachers__layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: minmax(calc(9px + 300 * (100vw / 1400)), 1fr) minmax(calc(9px + 300 * (100vw / 1400)), 1fr);
+		padding-bottom: 25%;
+		grid-column-gap: 10%;
+		grid-row-gap: 25%;
+	}
+	.content {
+		transition: 0.5s;
+		position: relative;
+		// padding: 5% 0 10% 5%;
+	}
+	.content:hover {
+		transition: 0.5s;
+		.teacher-info {
+			transition: 0.5s;
+			background: #48cae4;
+			color: #fff;
+		}
+	}
+	.content::before {
+		content: '';
+		position: absolute;
+		top: 0%;
+		left: 35%;
+		width: 26%;
+		height: 20%;
+		background: url(cloud1.png) 0 0 / cover;
+	}
+	.teacher-info {
+		background-color: #ccc;
+		transition: 0.5s;
+		font-size: calc(9px + 5 * (100vw / 1400));
+		font-family: "Bitter", sans-serif;
+		line-height: 1.4;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-rows: auto minmax(10px, 30px) 1fr;
+		h2 {
+			font-weight: 600;
+			font-size: calc(9px + 10 * (100vw / 1400));
+			padding: 5% 0 0 5%;
+		}
+		p{
+			font-weight: 500;
+			padding: 5% 0 5% 5%;
+		}
+		.teacher-info-img {
+			position: relative;
+			padding: 0 0 90% 0;
+			margin-bottom: 0 0 20px 0;
+		}
+		.teacher-info-img img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+
 .footer {
 	height: 160px;
 	background-color: #343a40;
@@ -580,5 +675,30 @@ body.__list-burger-active{
 			}
 		}
 	}
+	.teachers__content {
+		.teachers__layout {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 
+@media (max-width: 480px) {
+	.our-teachers {
+		.teacher {
+			.teacher-img {
+				img {
+					max-width: 40%
+				}
+			}
+		}
+	}
+	.teachers__content {
+		.teachers__layout {
+			grid-template-columns: 0.8fr;
+			grid-row-gap: 5%;
+			grid-template-rows: auto;
+			justify-content: center;
+			padding-bottom: 200%;
+		}
+	}
+}

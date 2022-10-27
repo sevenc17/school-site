@@ -97,6 +97,13 @@ const scrollToMenu = document.querySelector('.scroll-to-menu');
 const anchor = document.querySelector('#top');
 
 
+// const parallax = document.querySelector('.parallax');
+// const parallaxItem1 = document.querySelector('.parallax-item-1');
+// const parallaxItem2 = document.querySelector('.parallax-item-2');
+
+// console.log(parallax.offsetTop);
+// console.log(window.scrollY);
+
 window.addEventListener('scroll', function(event) {
 	if (window.scrollY > 120) {
 		scrollToMenu.classList.add('scroll-to-menu-active')
@@ -113,3 +120,8 @@ document.addEventListener('click', function(event){
 		})
 	} 
 })
+
+
+
+
+

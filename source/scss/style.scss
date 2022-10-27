@@ -286,7 +286,7 @@ body.__list-burger-active{
 }
 
 .home__content {
-	background-color: #a3d0d2;
+	background-color: #76c893;
 	margin: 0;
 	border: 0;
 	padding: 4% 0% 8% 0%;
@@ -493,6 +493,17 @@ body.__list-burger-active{
 		.slick-dots li.slick-active button{
 			background: url("dots-active.png") 0 0 / contain;
 		}
+	}
+}
+
+
+
+@keyframes img-anim {
+	0%{
+		transform: rotateZ(3deg)
+	}
+	100%{
+		transform: rotateZ(-3deg)
 	}
 }
 
