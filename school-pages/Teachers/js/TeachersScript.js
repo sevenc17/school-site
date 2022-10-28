@@ -99,3 +99,37 @@ document.addEventListener('click', function(event){
 		})
 	} 
 })
+
+
+const contentWindowList = [] = document.querySelectorAll('.content')
+const contentClosePopupList = [] = document.querySelectorAll('.close__popup')
+
+
+for (var i = 0 ; i < contentWindowList.length; i++){
+
+	contentWindowList[i].addEventListener('click', function(event){
+		console.log(1)
+		for (var j = 0 ; j < contentWindowList.length; j++){
+			if (contentWindowList[j].closest('.content').classList.contains('active__popup')){
+				contentWindowList[j].classList.remove('active__popup')
+				documentBody.classList.remove('__content__popup__active')
+			}
+		}
+		event.target.closest('.content').classList.add('active__popup')
+		documentBody.classList.add('__content__popup__active')
+	})
+
+	contentClosePopupList[i].addEventListener('click', function(event){
+		event.stopPropagation()
+		console.log(2)
+		for (var j = 0 ; j < contentWindowList.length; j++){
+			if(event.target.closest('.close__popup')){
+				contentWindowList[j].classList.remove('active__popup')
+				documentBody.classList.remove('__content__popup__active')			
+			}
+		}	
+	})
+
+}
+
+
