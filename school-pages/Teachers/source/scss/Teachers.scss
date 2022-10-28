@@ -382,12 +382,12 @@ body.__list-burger-active, body.__content__popup__active{
 	}
 	.teachers__content-title {
 		text-align: center;
-		margin-bottom: 15%;
+		margin-bottom: 5%;
 		color: #fff;
 		font-family: "Bitter", sans-serif;
 		.list-title {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			margin-bottom: 2%;
 		}
 		h2 {
@@ -405,14 +405,23 @@ body.__list-burger-active, body.__content__popup__active{
 			max-width: 10%;
 			align-self: center;
 		}
+		.touch-title {
+			margin: 5% 0 0 0;
+			font-size: calc(9px + 30 * (100vw / 1400));
+			font-weight: 700;
+			img {
+				margin: 2% 0 0 0;
+				transform: rotate(180deg);
+			}
+		}
 	}
 	.teachers__layout {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: minmax(calc(9px + 300 * (100vw / 1400)), 1fr) minmax(calc(9px + 300 * (100vw / 1400)), 1fr);
 		padding-bottom: 25%;
-		grid-column-gap: 10%;
-		grid-row-gap: 25%;
+		grid-column-gap: 7%;
+		grid-row-gap: 20%;
 	}
 	.content {
 		transition: 0.5s;
@@ -473,22 +482,24 @@ body.__list-burger-active, body.__content__popup__active{
 		background: url(cloud1.png) 0 0 / cover;
 	}
 	.teacher-info {
-		background-color: #ccc;
+		background-color: #eee;
 		transition: 0.5s;
 		font-size: calc(9px + 5 * (100vw / 1400));
 		font-family: "Bitter", sans-serif;
 		line-height: 1.4;
 		display: grid;
 		grid-auto-flow: row;
-		grid-template-rows: auto minmax(10px, 30px) 1fr;
+		grid-template-rows: auto minmax(20px, 30px) 1fr;
 		h2 {
-			font-weight: 600;
+			font-weight: 800;
 			font-size: calc(9px + 10 * (100vw / 1400));
 			padding: 5% 0 0 5%;
+			margin: 0 0 10% 0;
+			letter-spacing: 2px
 		}
 		p{
-			font-weight: 500;
-			padding: 5% 0 5% 5%;
+			font-weight: 600;
+			padding: 7% 0 5% 5%;
 		}
 		.teacher-info-img {
 			position: relative;
@@ -717,6 +728,7 @@ body.__list-burger-active, body.__content__popup__active{
 	.teachers__content {
 		.teachers__layout {
 			grid-template-columns: 1fr 1fr;
+			grid-row-gap: 25%;
 		}
 	}
 }
