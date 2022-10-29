@@ -83,11 +83,6 @@ body.__list-burger-active {
   overflow-y: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: none;
-  }
-}
 .header__wrapper {
   padding: 0 15%;
 }
