@@ -440,7 +440,7 @@ body.__list-burger-active, body.__content__popup__active{
 			text-align: center;
 			top: 0;
 			left: 0;
-			z-index: 4;
+			z-index: 10;
 			background-color: rgba(0, 0, 0, 0.7);
 			color: #fff;
 			font-size: calc(9px + 20 * (100vw / 1400));
@@ -636,8 +636,6 @@ body.__list-burger-active, body.__content__popup__active{
 		position: fixed;
 		top: 10vh;
 		right: 2vw;
-		cursor: pointer;
-		background: url(arrow-bottom.png) 0 0/ 100% 100%;
 	}
 	.header__wrapper {
 		padding: 0;
