@@ -1,3 +1,19 @@
+
+
+
+//Проверка темной темы
+
+function isDarkModeEnabled() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
+const whiteStyle = document.getElementById('white-style')
+
+if (isDarkModeEnabled()){
+	whiteStyle.href = "source/css/dark-style.css"
+}
+
+
 let mediaQuery1 = window.matchMedia('(max-width: 1350px)');
 let mediaQuery2 = window.matchMedia('(max-width: 768px)');
 let mediaQuery = 0;
@@ -37,6 +53,8 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 	});
 });
+
+//меню бургер
 
 const listBurger = document.querySelector('.list-burger');
 const listMenu = document.querySelector('.list-menu');
