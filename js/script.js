@@ -114,14 +114,6 @@ document.addEventListener('touched', function(event){
 const scrollToMenu = document.querySelector('.scroll-to-menu');
 const anchor = document.querySelector('#top');
 
-
-// const parallax = document.querySelector('.parallax');
-// const parallaxItem1 = document.querySelector('.parallax-item-1');
-// const parallaxItem2 = document.querySelector('.parallax-item-2');
-
-// console.log(parallax.offsetTop);
-// console.log(window.scrollY);
-
 window.addEventListener('scroll', function(event) {
 	if (window.scrollY > 120) {
 		scrollToMenu.classList.add('scroll-to-menu-active')
@@ -140,6 +132,86 @@ document.addEventListener('click', function(event){
 })
 
 
+//tab__list
 
 
+const tabList = [] = document.querySelectorAll('.tab');
+const blocksList = [] = document.querySelectorAll('.block');
+const officesList = [] = document.querySelectorAll('.offices');
+const importantsList = [] = document.querySelectorAll('.important');
+const library = document.querySelector('.library');
+const museum = document.querySelector('.museum');
+let lastTabActive = document.querySelector('.tab__active')
 
+for (i = 0; i < tabList.length; i++){
+	tabList[i].addEventListener('click', function(event){
+		for(j = 0; j < tabList.length; j++){
+			if (tabList[j].closest('.tab').classList.contains('tab__active')){
+				lastTabActive = tabList[j]
+			}
+		}
+		if(event.target.closest('.tab')){
+			lastTabActive.classList.remove('tab__active')
+			event.target.closest('.tab').classList.add('tab__active')
+			if (event.target.closest('.tab').getAttribute('id') == 'offices-tab'){
+				for (l = 0; l < blocksList.length; l++){
+					blocksList[l].classList.remove('active-block')
+				}
+				for (l = 0; l < officesList.length; l++){
+					officesList[l].classList.add('active-block')
+				}
+			}
+			else if (event.target.closest('.tab').getAttribute('id') == 'important-tab'){
+				for (l = 0; l < blocksList.length; l++){
+					blocksList[l].classList.remove('active-block')
+				}
+				for (l = 0; l < importantsList.length; l++){
+					importantsList[l].classList.add('active-block')
+				}
+			}
+			else if (event.target.closest('.tab').getAttribute('id') == 'library-tab'){
+				for (l = 0; l < blocksList.length; l++){
+					blocksList[l].classList.remove('active-block')
+				}
+				library.classList.add('active-block')
+			}
+			else if (event.target.closest('.tab').getAttribute('id') == 'museum-tab'){
+				for (l = 0; l < blocksList.length; l++){
+					blocksList[l].classList.remove('active-block')
+				}
+				museum.classList.add('active-block')
+			}
+			else {
+				event.target.closest('.tab').classList.remove('tab__active');				
+			}
+		}
+	})
+}
+
+const blockClosePopupList = [] = document.querySelectorAll('.close__popup')
+
+
+for (var i = 0 ; i < blocksList.length; i++){
+
+	blocksList[i].addEventListener('click', function(event){
+		for (var j = 0 ; j < blocksList.length; j++){
+			if (blocksList[j].closest('.block').classList.contains('active__popup')){
+				blocksList[j].classList.remove('active__popup')
+				documentBody.classList.remove('__content__popup__active')
+			}
+		}
+		event.target.closest('.block').classList.add('active__popup')
+		documentBody.classList.add('__content__popup__active')
+	})
+
+	blockClosePopupList[i].addEventListener('click', function(event){
+		event.stopPropagation()
+		for (var j = 0 ; j < blocksList.length; j++){
+			if(event.target.closest('.close__popup')){
+				blocksList[j].classList.remove('active__popup')
+				documentBody.classList.remove('__content__popup__active')			
+			}
+		}	
+	})
+
+}
