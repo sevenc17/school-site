@@ -186,8 +186,8 @@ body.__list-burger-active, body.__content__popup__active {
   width: 150%;
   top: 150%;
   left: 0%;
+  border: 2px solid #fff;
   background-color: #ccc;
-  border-radius: 5px;
   z-index: 5;
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
@@ -197,7 +197,8 @@ body.__list-burger-active, body.__content__popup__active {
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
     background-color: #a8abb7;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
   }
 }
 .header .header__menu .list-burger {
@@ -235,6 +236,9 @@ body.__list-burger-active, body.__content__popup__active {
 .header .header__menu .list-burger .line::after {
   bottom: 0;
 }
+.header .header__menu .list-menu.list-menu-active {
+  overflow: auto;
+}
 
 .scroll-to-menu {
   display: none;
@@ -269,8 +273,8 @@ body.__list-burger-active, body.__content__popup__active {
 .title h2::before, .title h2::after {
   content: "";
   position: absolute;
-  width: 3%;
-  height: 100%;
+  width: 4vw;
+  height: 4vw;
   background-color: #fff;
   border-radius: 60% 5%;
   -webkit-animation: bef-aft-animation 4s linear infinite alternate;
@@ -643,7 +647,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .places__school-title .touch-title img {
   margin: 2% 0 0 0;
-  max-width: 5%;
+  max-width: 8%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -711,7 +715,7 @@ body.__list-burger-active, body.__content__popup__active {
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  font-size: calc(9px + 1.4285714286vw);
+  font-size: calc(9px + 1.0714285714vw);
   font-family: "Bitter", sans-serif;
   font-weight: 600;
   line-height: 1.5;
@@ -726,7 +730,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .block.active__popup .block__popup img {
   padding: 5vh 0 5% 0;
-  max-width: 50vw;
+  max-width: 40vh;
 }
 .places__school .block.active__popup .block__popup p {
   max-width: 70%;
@@ -871,7 +875,6 @@ body.__list-burger-active, body.__content__popup__active {
     display: none;
     height: 75px;
   }
-
   .scroll-to-menu-active {
     display: block;
     position: fixed;
@@ -901,7 +904,6 @@ body.__list-burger-active, body.__content__popup__active {
   .home__content .content .banner__school .banner-info {
     text-align: center;
   }
-
   .home-slider {
     padding: 10% 0;
   }
@@ -944,7 +946,6 @@ body.__list-burger-active, body.__content__popup__active {
   .header__wrapper {
     padding: 0;
   }
-
   .header .header__menu {
     height: 100%;
   }
@@ -1042,20 +1043,17 @@ body.__list-burger-active, body.__content__popup__active {
   .header .header__menu .list-menu.list-menu-active .list li .list__sub-menu li {
     padding: 2% 2%;
   }
-
   .scroll-to-menu {
     width: 50px;
     display: none;
     height: 50px;
   }
-
   .scroll-to-menu-active {
     display: block;
     position: fixed;
     top: 10vh;
     right: 2vw;
   }
-
   .home__content {
     padding: 10% 0 0 0;
   }
@@ -1107,7 +1105,6 @@ body.__list-burger-active, body.__content__popup__active {
   .home__content .content .home__content-animation {
     height: 130px;
   }
-
   .home-slider {
     padding: 10% 0;
   }
@@ -1144,11 +1141,28 @@ body.__list-burger-active, body.__content__popup__active {
     width: 40px;
     height: 40px;
   }
-
   .scroll-to-menu-active {
     display: block;
     position: fixed;
     top: 10vh;
     right: 2vw;
+  }
+}
+@media (min-height: 605px) {
+  .places__school .block.active__popup .block__popup .close__popup {
+    position: absolute;
+    top: 0vh;
+    right: 5vh;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 8vw;
+  }
+  .places__school .block.active__popup .block__popup img {
+    padding: 5vh 0 5% 0;
+    max-width: 50vw;
+  }
+  .places__school .block.active__popup .block__popup p {
+    max-width: 70%;
+    margin: 0 auto;
   }
 }
