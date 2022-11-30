@@ -685,14 +685,88 @@ body.__list-burger-active, body.__content__popup__active{
 	}
 }
 
-.school__newspaper {
-	.newspaper {
-		text-align: center;
-		iframe {
-			width: 70vw;
-			height: 1000px;
-			overflow-x: hidden;
+.spoilers.home-style {
+	margin: 5% 0 0 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-color: #a470fa;
+	.title {
+		h2 {
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				width: 4vw;
+				height: 4vw;
+				background: url(star.png) 0 0/ 100% 100%;
+				animation: rotation 10s linear infinite;
+			}
+			&::before {
+				left: 20%
+			}
+			&::after {
+				right: 20%
+			}
+		}	
+	}
+	.spoilers-items {
+
+	}
+	.spoiler {
+		font-family: "Bitter", sans-serif;
+		padding: 2% 0;
+		h2 {
+			color: #fff;
+			font-weight: 900;
+			font-size: calc(9px + 20 * (100vw / 1400));
+			padding: 0 0 2% 0;
+			position: relative;
+			cursor: pointer;
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				top: 1vw;
+				left: 20%;
+				width: 2vw;
+				height: 3px;
+				background-color: #fff;
+				transition: 0.5s;
+			}
+			&::before {
+				transform: rotate(45deg);
+			}
+			&::after {
+				transform: rotate(-45deg);
+				left: 21.5%;
+			}
 		}
+		h2.active {
+			&::before {
+				transform: rotate(-45deg);
+				transition: 0.5s;
+			}
+			&::after {
+				transform: rotate(45deg);
+				transition: 0.5s;
+			}			
+		}
+		p {
+			font-size: calc(9px + 10 * (100vw / 1400));
+			margin-left: 3%;
+			font-weight: 500;
+			word-spacing: 3px;
+			color: #fff;
+			display: none;
+			padding: 2% 0;
+		}
+	}
+}
+
+@keyframes rotation {
+	0%{
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);		
 	}
 }
 

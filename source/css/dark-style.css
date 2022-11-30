@@ -826,15 +826,102 @@ body.__list-burger-active, body.__content__popup__active {
             transform: rotateZ(-3deg);
   }
 }
-.school__newspaper .newspaper {
-  text-align: center;
+.spoilers.home-style {
+  margin: 5% 0 0 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #a470fa;
 }
-.school__newspaper .newspaper iframe {
-  width: 70vw;
-  height: 1000px;
-  overflow-x: hidden;
+.spoilers.home-style .title h2::before, .spoilers.home-style .title h2::after {
+  content: "";
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  background: url(star.png) 0 0/100% 100%;
+  -webkit-animation: rotation 10s linear infinite;
+          animation: rotation 10s linear infinite;
+}
+.spoilers.home-style .title h2::before {
+  left: 20%;
+}
+.spoilers.home-style .title h2::after {
+  right: 20%;
+}
+.spoilers.home-style .spoiler {
+  font-family: "Bitter", sans-serif;
+  padding: 2% 0;
+}
+.spoilers.home-style .spoiler h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: calc(9px + 1.4285714286vw);
+  padding: 0 0 2% 0;
+  position: relative;
+  cursor: pointer;
+}
+.spoilers.home-style .spoiler h2::before, .spoilers.home-style .spoiler h2::after {
+  content: "";
+  position: absolute;
+  top: 1vw;
+  left: 20%;
+  width: 2vw;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.spoilers.home-style .spoiler h2::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.spoilers.home-style .spoiler h2::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 21.5%;
+}
+.spoilers.home-style .spoiler h2.active::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.spoilers.home-style .spoiler h2.active::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.spoilers.home-style .spoiler p {
+  font-size: calc(9px + 0.7142857143vw);
+  margin-left: 3%;
+  font-weight: 500;
+  word-spacing: 3px;
+  color: #fff;
+  display: none;
+  padding: 2% 0;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .footer {
   height: 120px;
   background-color: #343a40;
