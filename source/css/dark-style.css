@@ -264,6 +264,7 @@ body.__list-burger-active, body.__content__popup__active {
   padding-bottom: 5%;
   color: #eee;
   font-size: calc(9px + 2.0714285714vw);
+  letter-spacing: 2px;
 }
 .title h2 {
   font-weight: 900;
@@ -273,8 +274,8 @@ body.__list-burger-active, body.__content__popup__active {
 .title h2::before, .title h2::after {
   content: "";
   position: absolute;
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   background-color: #fff;
   border-radius: 60% 5%;
   -webkit-animation: bef-aft-animation 4s linear infinite alternate;
@@ -294,8 +295,8 @@ body.__list-burger-active, body.__content__popup__active {
 .title h1::before, .title h1::after {
   content: "";
   position: absolute;
-  width: 3%;
-  height: 100%;
+  width: 3vw;
+  height: 3vw;
   background-color: #fff;
   border-radius: 60% 5%;
 }
@@ -311,6 +312,7 @@ body.__list-burger-active, body.__content__popup__active {
   padding-top: 1%;
   max-width: 80%;
   margin: 0 auto;
+  letter-spacing: 1.5px;
 }
 
 @-webkit-keyframes bef-aft-animation {
@@ -424,6 +426,25 @@ body.__list-burger-active, body.__content__popup__active {
   font-size: calc(9px + 0.9285714286vw);
   line-height: 1.1;
   font-weight: 700;
+}
+.home__content .content .slide-about {
+  padding: 5% 0 0 0;
+  text-align: center;
+  font-family: "Bitter", sans-serif;
+  text-transform: uppercase;
+  font-size: calc(9px + 1.4285714286vw);
+}
+.home__content .content .slide-about a {
+  background-color: #343a40;
+  max-width: 20vw;
+  margin: 0 auto;
+  padding: 2% 4%;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 5px;
 }
 .home__content .content .home__content-animation {
   padding: 4% 0 8% 0;
@@ -805,6 +826,15 @@ body.__list-burger-active, body.__content__popup__active {
             transform: rotateZ(-3deg);
   }
 }
+.school__newspaper .newspaper {
+  text-align: center;
+}
+.school__newspaper .newspaper iframe {
+  width: 70vw;
+  height: 1000px;
+  overflow-x: hidden;
+}
+
 .footer {
   height: 120px;
   background-color: #343a40;
@@ -1009,7 +1039,7 @@ body.__list-burger-active, body.__content__popup__active {
             animation-duration: 1s;
   }
   .header .header__menu .list-menu.list-menu-active .list a {
-    font-size: calc(9px + 1.4285714286vw);
+    font-size: calc(9px + 1.7857142857vw);
     font-weight: 700;
   }
   .header .header__menu .list-menu.list-menu-active .list li {

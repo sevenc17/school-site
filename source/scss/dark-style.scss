@@ -202,6 +202,7 @@ body.__list-burger-active, body.__content__popup__active{
 	padding-bottom: 5%;
 	color: #eee;
 	font-size: calc(9px + 29 * (100vw / 1400));
+	letter-spacing: 2px;
 	h2 {
 		font-weight: 900;
 		position: relative;
@@ -209,12 +210,11 @@ body.__list-burger-active, body.__content__popup__active{
 		&::before, &::after {
 			content: '';
 			position: absolute;
-			width: 4vw;
-			height: 4vw;
+			width: 3vw;
+			height: 3vw;
 			background-color: #fff;
 			border-radius: 60% 5%;
 			animation: bef-aft-animation 4s linear infinite alternate;
-			// background: url('slider-icon-heading.png') 0 0 / contain no-repeat;
 		}
 		&::before {
 			left: 20%
@@ -230,8 +230,8 @@ body.__list-burger-active, body.__content__popup__active{
 		&::before, &::after {
 			content: '';
 			position: absolute;
-			width: 3%;
-			height: 100%;
+			width: 3vw;
+			height: 3vw;
 			background-color: #fff;
 			border-radius: 60% 5%;
 
@@ -250,6 +250,7 @@ body.__list-burger-active, body.__content__popup__active{
 		padding-top: 1%;
 		max-width: 80%;
 		margin: 0 auto;
+		letter-spacing: 1.5px;
 	}
 }
 
@@ -339,6 +340,25 @@ body.__list-burger-active, body.__content__popup__active{
 					line-height: 1.1;
 					font-weight: 700;
 				}
+			}
+		}
+		.slide-about {
+			padding: 5% 0 0 0;
+			text-align: center;
+			font-family: "Bitter", sans-serif;
+			text-transform: uppercase;
+			font-size: calc(9px + 20 * (100vw / 1400));
+			a {
+				background-color: #343a40;
+				max-width: 20vw;
+				margin: 0 auto;
+				padding: 2% 4%;
+				border-radius: 10px;
+				border: 3px solid #fff;
+				cursor: pointer;
+				color: #fff;
+				font-weight: 600;
+				letter-spacing: 5px;
 			}
 		}
 		.home__content-animation {
@@ -665,6 +685,16 @@ body.__list-burger-active, body.__content__popup__active{
 	}
 }
 
+.school__newspaper {
+	.newspaper {
+		text-align: center;
+		iframe {
+			width: 70vw;
+			height: 1000px;
+			overflow-x: hidden;
+		}
+	}
+}
 
 .footer {
 	height: 120px;
@@ -873,7 +903,7 @@ body.__list-burger-active, body.__content__popup__active{
 				animation-duration: 1s;
 				.list {
 					a {
-						font-size: calc(9px + 20 * (100vw / 1400));
+						font-size: calc(9px + 25 * (100vw / 1400));
 						font-weight: 700;
 					}
 					li {
