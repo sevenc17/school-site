@@ -36,7 +36,6 @@ $(document).ready(function(){
 		dots: true,
 		slidesToShow: media(),
 		slidesToScroll: 1,
-		waitForAnimate: false,
 	});
 });
 
@@ -113,6 +112,7 @@ document.addEventListener('touched', function(event){
 
 const scrollToMenu = document.querySelector('.scroll-to-menu');
 const anchor = document.querySelector('#top');
+const about = document.querySelector('#about');
 
 window.addEventListener('scroll', function(event) {
 	if (window.scrollY > 120) {
@@ -122,17 +122,29 @@ window.addEventListener('scroll', function(event) {
 	}
 })
 
+const scrolls = document.querySelectorAll('a[href*="#"]')
+
+for (let scroll of scrolls){
+	scroll.addEventListener('click', function(event){
+		event.preventDefault()
+		const blockID = scroll.getAttribute('href')
+		document.querySelector("" + blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+}
+
 document.addEventListener('click', function(event){
 	if (event.target.classList.contains('scroll-to-menu-active')) {
 		anchor.scrollIntoView({
 			behavior: "smooth",
 			block: "start"
 		})
-	} 
+	}
 })
 
 
-//tab__list
 
 
 const tabList = [] = document.querySelectorAll('.tab');
@@ -215,3 +227,10 @@ for (var i = 0 ; i < blocksList.length; i++){
 	})
 
 }
+
+
+$(document).ready(function(){
+	$('.spoiler-open').click(function(event){
+		$(this).toggleClass('active').next().slideToggle(500);
+	})
+})
