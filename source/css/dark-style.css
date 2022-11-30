@@ -828,6 +828,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .spoilers.home-style {
   margin: 5% 0 0 0;
+  padding: 10% 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-color: #a470fa;
@@ -847,6 +848,9 @@ body.__list-burger-active, body.__content__popup__active {
 .spoilers.home-style .title h2::after {
   right: 20%;
 }
+.spoilers.home-style .spoilers-text {
+  padding-bottom: 5%;
+}
 .spoilers.home-style .spoiler {
   font-family: "Bitter", sans-serif;
   padding: 2% 0;
@@ -855,20 +859,20 @@ body.__list-burger-active, body.__content__popup__active {
   color: #fff;
   font-weight: 900;
   font-size: calc(9px + 1.4285714286vw);
-  padding: 0 0 2% 0;
+  padding: 2% 0 2% 8%;
   position: relative;
   cursor: pointer;
 }
 .spoilers.home-style .spoiler h2::before, .spoilers.home-style .spoiler h2::after {
   content: "";
   position: absolute;
-  top: 1vw;
-  left: 20%;
+  top: 2.5vw;
+  left: 0;
   width: 2vw;
   height: 3px;
   background-color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .spoilers.home-style .spoiler h2::before {
   -webkit-transform: rotate(45deg);
@@ -877,19 +881,19 @@ body.__list-burger-active, body.__content__popup__active {
 .spoilers.home-style .spoiler h2::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  left: 21.5%;
+  left: 1.5%;
 }
 .spoilers.home-style .spoiler h2.active::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .spoilers.home-style .spoiler h2.active::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .spoilers.home-style .spoiler p {
   font-size: calc(9px + 0.7142857143vw);
@@ -1281,5 +1285,24 @@ body.__list-burger-active, body.__content__popup__active {
   .places__school .block.active__popup .block__popup p {
     max-width: 70%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 550px) {
+  .spoilers.home-style .title h2::before, .spoilers.home-style .title h2::after {
+    width: 5vw;
+    height: 5vw;
+  }
+  .spoilers.home-style .title h2::before {
+    left: 15%;
+  }
+  .spoilers.home-style .title h2::after {
+    right: 15%;
+  }
+  .spoilers.home-style .spoiler {
+    font-family: "Bitter", sans-serif;
+    padding: 2% 0;
+  }
+  .spoilers.home-style .spoiler h2::before, .spoilers.home-style .spoiler h2::after {
+    width: 2.5vw;
   }
 }
