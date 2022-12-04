@@ -232,5 +232,6 @@ for (var i = 0 ; i < blocksList.length; i++){
 $(document).ready(function(){
 	$('.spoiler-open').click(function(event){
 		$(this).toggleClass('active').next().slideToggle(500);
+		$(this).closest('.spoiler').toggleClass('go')
 	})
 })
