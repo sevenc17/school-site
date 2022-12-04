@@ -715,6 +715,7 @@ body.__list-burger-active, body.__content__popup__active{
 	.spoiler {
 		font-family: "Bitter", sans-serif;
 		padding: 2% 0;
+		position: relative;
 		h2 {
 			color: #fff;
 			font-weight: 900;
@@ -737,7 +738,7 @@ body.__list-burger-active, body.__content__popup__active{
 			}
 			&::after {
 				transform: rotate(-45deg);
-				left: 1.5%;
+				left: 1.3vw;
 			}
 		}
 		h2.active {
@@ -751,13 +752,49 @@ body.__list-burger-active, body.__content__popup__active{
 			}			
 		}
 		p {
+			display: none;
 			font-size: calc(9px + 10 * (100vw / 1400));
 			margin-left: 3%;
 			font-weight: 500;
 			word-spacing: 3px;
 			color: #fff;
-			display: none;
 			padding: 2% 0;
+			max-width: 70%;
+		}
+	}
+	.spoiler-img {
+		text-align: right;
+		opacity: 0;
+		transition: 0.5s;
+		position: absolute;
+		max-width: 20%;
+		top: 0;
+		right: 0;
+		z-index: 6;
+		img {
+			max-width: 100%;
+			border: 3px solid #fff;
+			border-radius: 5%;
+		}
+	}
+	.spoiler.go{
+		.spoiler-img {
+			opacity: 1;
+			display: block;
+			transition: 0.5s;
+		}
+	}
+	.spoiler:nth-child(odd) .spoiler-img{
+		top: 2vw;
+		img {
+			transform: rotate(5deg);
+		}
+	}
+	.spoiler:nth-child(even) .spoiler-img{
+		top: 2vw;
+		right: 1vw;
+		img {
+			transform: rotate(-5deg);
 		}
 	}
 }

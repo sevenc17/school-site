@@ -854,6 +854,7 @@ body.__list-burger-active, body.__content__popup__active {
 .spoilers.home-style .spoiler {
   font-family: "Bitter", sans-serif;
   padding: 2% 0;
+  position: relative;
 }
 .spoilers.home-style .spoiler h2 {
   color: #fff;
@@ -881,7 +882,7 @@ body.__list-burger-active, body.__content__popup__active {
 .spoilers.home-style .spoiler h2::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  left: 1.5%;
+  left: 1.3vw;
 }
 .spoilers.home-style .spoiler h2.active::before {
   -webkit-transform: rotate(-45deg);
@@ -896,13 +897,51 @@ body.__list-burger-active, body.__content__popup__active {
   transition: 0.2s;
 }
 .spoilers.home-style .spoiler p {
+  display: none;
   font-size: calc(9px + 0.7142857143vw);
   margin-left: 3%;
   font-weight: 500;
   word-spacing: 3px;
   color: #fff;
-  display: none;
   padding: 2% 0;
+  max-width: 70%;
+}
+.spoilers.home-style .spoiler-img {
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  max-width: 20%;
+  top: 0;
+  right: 0;
+  z-index: 6;
+}
+.spoilers.home-style .spoiler-img img {
+  max-width: 100%;
+  border: 3px solid #fff;
+  border-radius: 5%;
+}
+.spoilers.home-style .spoiler.go .spoiler-img {
+  opacity: 1;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.spoilers.home-style .spoiler:nth-child(odd) .spoiler-img {
+  top: 2vw;
+}
+.spoilers.home-style .spoiler:nth-child(odd) .spoiler-img img {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+.spoilers.home-style .spoiler:nth-child(even) .spoiler-img {
+  top: 2vw;
+  right: 1vw;
+}
+.spoilers.home-style .spoiler:nth-child(even) .spoiler-img img {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 @-webkit-keyframes rotation {
