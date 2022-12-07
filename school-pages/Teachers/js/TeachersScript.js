@@ -133,3 +133,8 @@ for (var i = 0 ; i < contentWindowList.length; i++){
 }
 
 
+$(document).ready(function() {
+	$('.open-all').click(function(event){
+		$(this).toggleClass('active').prev().slideToggle(1000)
+	})
+})
