@@ -107,21 +107,19 @@ for (var i = 0 ; i < contentWindowList.length; i++){
 
 }
 
-window.addEventListener('DOMContentLoaded', function(){
-	$(function(){
-		$('.teachers-list').slick({
-			slidesToShow: 1,
-		})
+$(function(){
+	$('.teachers-list').slick({
+		slidesToShow: 1,
 	})
+})
 
 
-	$(function(){
-		$('.tab').click(function(event){
-			event.preventDefault();
-			$(this).addClass('tab-active')
-			$('.tab').not($(this)).removeClass('tab-active')
-			$('.teachers-list').removeClass('active-slider')
-			$(event.target.getAttribute('href') + '').addClass('active-slider')
-		})
+$(function(){
+	$('.tab').click(function(event){
+		event.preventDefault();
+		$(this).addClass('tab-active')
+		$('.tab').not($(this)).removeClass('tab-active')
+		$('.teachers-list').removeClass('active-slider')
+		$(event.target.getAttribute('href') + '').addClass('active-slider')
 	})
 })
