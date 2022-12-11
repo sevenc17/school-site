@@ -377,14 +377,69 @@ body.__list-burger-active, body.__content__popup__active {
 
 .our-teachers {
   margin: 0;
-  padding: 8% 8%;
+  padding: 6% 6%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: #9F99FF;
+  background: -webkit-gradient(linear, left top, right top, from(#9F99FF), color-stop(#80CCE8), to(#82FFB8));
+  background: linear-gradient(to right, #9F99FF, #80CCE8, #82FFB8);
   color: #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
+}
+.our-teachers .teachers-list {
+  background-color: rgba(50, 50, 50, 0.1);
+  padding: 5% 0 5% 0;
+  margin: 0 0 10% 0;
+  position: relative;
+}
+.our-teachers .teachers-list .slick-list.draggable {
+  overflow: hidden;
+}
+.our-teachers .teachers-list .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.our-teachers .teachers-list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 7vw;
+  height: 7vw;
+  font-size: 0;
+  background-color: transparent;
+  z-index: 5;
+}
+.our-teachers .teachers-list .slick-arrow.slick-next {
+  background: url("arrow-right.png") 0 0/100%;
+  right: -12%;
+}
+.our-teachers .teachers-list .slick-arrow.slick-prev {
+  background: url("arrow-left.png") 0 0/100%;
+  left: -12%;
+}
+.our-teachers .menu-teachers {
+  list-style-type: none;
+}
+.our-teachers .menu-teachers ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(9px + 1.4285714286vw);
+  font-family: "Bitter", sans-serif;
+}
+.our-teachers .menu-teachers ul .tab {
+  background-color: rgba(50, 50, 50, 0.05);
+  padding: 3% 7%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  cursor: pointer;
+}
+.our-teachers .menu-teachers ul .tab-active {
+  background-color: rgba(50, 50, 50, 0.1);
 }
 .our-teachers .title {
   color: #fff;
@@ -395,21 +450,31 @@ body.__list-burger-active, body.__content__popup__active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: #fff;
   font-size: calc(9px + 1.0714285714vw);
   font-weight: 500;
-  padding: 0 0 10% 0;
+  max-height: 100%;
 }
 .our-teachers .teacher .teacher-img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .our-teachers .teacher .teacher-img img {
-  width: 40%;
+  width: 50%;
   border-radius: 5%;
   border: 8px solid #fff;
   margin: 0 0 7% 0;
@@ -423,9 +488,9 @@ body.__list-burger-active, body.__content__popup__active {
   font-weight: 500;
 }
 .our-teachers .teacher .about-teacher {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
   font-size: calc(9px + 1.3571428571vw);
   font-family: "Bitter", sans-serif;
   line-height: 1.4;
@@ -436,36 +501,22 @@ body.__list-burger-active, body.__content__popup__active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  position: relative;
-  height: 100%;
-  padding-bottom: 8%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
-.our-teachers .teacher .about-teacher::after {
+.our-teachers .teacher .about-teacher p {
+  position: relative;
+  padding-bottom: 5%;
+}
+.our-teachers .teacher .about-teacher p::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
   bottom: 0;
+  left: 0;
   background-color: #fff;
-}
-.our-teachers .all-teachers {
-  display: none;
-}
-.our-teachers .open-all {
-  background-color: #a477ff;
-  padding: 2% 4%;
-  border: 3px solid #fff;
-  max-width: 20vw;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0 auto;
-  cursor: pointer;
-  font-size: calc(9px + 0.8571428571vw);
-  font-family: "Bitter", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .teachers__content {
@@ -743,6 +794,7 @@ body.__list-burger-active, body.__content__popup__active {
     padding-bottom: 5%;
   }
   .our-teachers .teacher .teacher-img img {
+    margin: 0 auto 5% auto;
     max-width: 50%;
   }
   .our-teachers .teacher .about-teacher {

@@ -302,12 +302,60 @@ body.__list-burger-active, body.__content__popup__active{
 
 .our-teachers {
 	margin: 0;
-	padding: 8% 8%;
+	padding: 6% 6%;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
-	background-color: #9F99FF;
+	background: linear-gradient(to right, #9F99FF, #80CCE8, #82FFB8);
 	color: #fff;
 	flex: 1 1 100%;
+	.teachers-list{
+		background-color: rgb(50, 50, 50, 0.1);
+		padding: 5% 0 5% 0;
+		margin: 0 0 10% 0;
+		position: relative;
+		.slick-list.draggable {
+			overflow: hidden;
+		}
+		.slick-track {
+			display: flex;
+		}
+		.slick-arrow {
+			position: absolute;
+			top: 50%;
+			width: 7vw;
+			height: 7vw;
+			font-size: 0;
+			background-color: transparent;
+			z-index: 5;
+		}
+		.slick-arrow.slick-next {
+			background: url('arrow-right.png') 0 0 / 100%;
+			right: -12%;
+		}
+		.slick-arrow.slick-prev {
+			background: url('arrow-left.png') 0 0 / 100%;
+			left: -12%;
+		}
+	}
+	.menu-teachers {
+		list-style-type: none;
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			font-size: calc(9px + 20 * (100vw / 1400));
+			font-family: "Bitter", sans-serif;
+			.tab {
+				background-color: rgb(50, 50, 50, 0.05);
+				padding: 3% 7%;
+				border-top-right-radius: 20px;
+				border-top-left-radius: 20px;
+				cursor: pointer;
+			}
+			.tab-active {
+				background-color: rgb(50, 50, 50, 0.1);
+			}
+		}
+	}
 	.title {
 		color: #fff;
 		font-family: "Bitter", sans-serif;
@@ -315,15 +363,19 @@ body.__list-burger-active, body.__content__popup__active{
 	}
 	.teacher {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		color: #fff;
 		font-size: calc(9px + 15 * (100vw / 1400));
 		font-weight: 500;
-		padding: 0 0 10% 0;
+		// padding: 0 0 10% 0;
+		max-height: 100%;
 		.teacher-img {
-			flex: 1 1 50%;
+			flex: 0 0 40%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
 			img {
-				width: 40%;
+				width: 50%;
 				border-radius: 5%;
 				border: 8px solid #fff;
 				margin: 0 0 7% 0;
@@ -338,42 +390,27 @@ body.__list-burger-active, body.__content__popup__active{
 			}
 		}
 		.about-teacher {
-			flex: 1 1 50%;
+			flex: 0 0 40%;
 			font-size: calc(9px + 19 * (100vw / 1400));
 			font-family: "Bitter", sans-serif;
 			line-height: 1.4;
 			display: flex;
 			flex-direction: column;
-			align-self: flex-start;
-			position: relative;
-			height: 100%;
-			padding-bottom: 8%;
-			&::after {
+			align-self: center;
+			p {
+				position: relative;
+				padding-bottom: 5%;
+			}
+			p::after {
 				content: '';
 				position: absolute;
 				width: 100%;
 				height: 4px;
 				bottom: 0;
+				left: 0;
 				background-color: #fff;
 			}
 		}
-	}
-	.all-teachers {
-		display: none;
-	}
-	.open-all {
-		background-color: #a477ff;
-		padding: 2% 4%;
-		border: 3px solid #fff;
-		max-width: 20vw;
-		text-align: center;
-		border-radius: 10px;
-		margin: 0 auto;
-		cursor: pointer;
-		font-size: calc(9px + 12 * (100vw / 1400));
-		font-family: "Bitter", sans-serif;
-		font-weight: 700;
-		letter-spacing: 2px;
 	}
 }
 
@@ -604,6 +641,7 @@ body.__list-burger-active, body.__content__popup__active{
 				text-align: center;
 				padding-bottom: 5%;
 				img {
+					margin: 0 auto 5% auto;
 					max-width: 50%
 				}
 			}
@@ -752,7 +790,7 @@ body.__list-burger-active, body.__content__popup__active{
 		.teacher {
 			.teacher-img {
 				img {
-					max-width: 40%
+					max-width: 40%;
 				}
 			}
 		}

@@ -1,28 +1,3 @@
-// let mediaQuery1 = window.matchMedia('(max-width: 1350px)');
-// let mediaQuery2 = window.matchMedia('(max-width: 768px)');
-// let mediaQuery = 0;
-
-// $(document).ready(function(){
-// 	$('.slider').slick({
-// 		dots: true,
-// 		slidesToShow: media(),
-// 		slidesToScroll: 1,
-// 	});
-// });
-
-// $(document).ready(function(){
-// 	$('.home__content-slider').slick({
-// 		dots: false,
-// 		arrows: false,
-// 		autoplay: true,
-// 		speed: 1000,
-// 		autoplaySpeed: 1500,
-// 		pauseOnHover: true,
-// 		pauseOnFocus: false,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 	});
-// });
 
 const listBurger = document.querySelector('.list-burger');
 const listMenu = document.querySelector('.list-menu');
@@ -132,9 +107,9 @@ for (var i = 0 ; i < contentWindowList.length; i++){
 
 }
 
-
-$(document).ready(function() {
-	$('.open-all').click(function(event){
-		$(this).toggleClass('active').prev().slideToggle(1000)
+$(function(){
+	$('.teachers-list').slick({
+		slidesToShow: 1,
+		adaptiveHeight: true,
 	})
 })
