@@ -316,8 +316,6 @@ body.__list-burger-active, body.__content__popup__active{
 		display: none;
 		&.active-slider {
 			display: block;
-			opacity: 1;
-			transition: 3s;
 		}
 		.slick-list.draggable {
 			overflow: hidden;
@@ -342,6 +340,12 @@ body.__list-burger-active, body.__content__popup__active{
 			background: url('arrow-left.png') 0 0 / 100%;
 			left: -12%;
 		}
+	}
+	.teachers-kkk {
+		display: none;
+	}
+	.teachers-kkk.active-slider {
+		display: block
 	}
 	.menu-teachers {
 		list-style-type: none;

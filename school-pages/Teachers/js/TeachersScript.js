@@ -121,5 +121,7 @@ $(function(){
 		$('.tab').not($(this)).removeClass('tab-active')
 		$('.teachers-list').removeClass('active-slider')
 		$(event.target.getAttribute('href') + '').addClass('active-slider')
+		$(event.target.getAttribute('href') + '').get(0).slick.setPosition()
+		$(event.target.getAttribute('href') + '').slick('setPosition')	
 	})
 })

@@ -396,9 +396,6 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .our-teachers .teachers-list.active-slider {
   display: block;
-  opacity: 1;
-  -webkit-transition: 3s;
-  transition: 3s;
 }
 .our-teachers .teachers-list .slick-list.draggable {
   overflow: hidden;
@@ -424,6 +421,12 @@ body.__list-burger-active, body.__content__popup__active {
 .our-teachers .teachers-list .slick-arrow.slick-prev {
   background: url("arrow-left.png") 0 0/100%;
   left: -12%;
+}
+.our-teachers .teachers-kkk {
+  display: none;
+}
+.our-teachers .teachers-kkk.active-slider {
+  display: block;
 }
 .our-teachers .menu-teachers {
   list-style-type: none;
