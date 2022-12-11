@@ -445,6 +445,9 @@ body.__list-burger-active, body.__content__popup__active {
   height: 100%;
   padding: 2vw 5vw;
 }
+.our-teachers .menu-teachers ul a:visited {
+  color: #fff;
+}
 .our-teachers .menu-teachers ul .tab {
   background-color: rgba(50, 50, 50, 0.05);
   border-top-right-radius: 20px;

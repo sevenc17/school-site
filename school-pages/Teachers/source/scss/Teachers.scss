@@ -357,6 +357,9 @@ body.__list-burger-active, body.__content__popup__active{
 				height: 100%;
 				padding: 2vw 5vw;
 			}
+			a:visited {
+				color: #fff;
+			}
 			.tab {
 				background-color: rgb(50, 50, 50, 0.05);
 				border-top-right-radius: 20px;
