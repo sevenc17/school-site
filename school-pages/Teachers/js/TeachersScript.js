@@ -122,6 +122,17 @@ $(function(){
 		$('.teachers-list').removeClass('active-slider')
 		$(event.target.getAttribute('href') + '').addClass('active-slider')
 		$(event.target.getAttribute('href') + '').get(0).slick.setPosition()
-		$(event.target.getAttribute('href') + '').slick('setPosition')	
+		$(event.target.getAttribute('href') + '').slick('setPosition')
+		//ЕСЛИ ДЕЛАЕШЬ ТАБЫ СО СЛАЙДЕРОМ ВНТУРИ 
+		//$(event.target.getAttribute('href') + '').get(0).slick.setPosition()
+		//$(event.target.getAttribute('href') + '').slick('setPosition')
+		//ЭТИ ДВЕ ФУНКЦИИ ОБЯЗАТЕЛЬНО ПОСЛЕ ДОБАВЛЕНИЯ КЛАССАА!!!!!!!!!
+	})
+})
+
+$(function(){
+	$('.slick-slide .teacher-spoiler').click(function(){
+		$('.slick-slide .teacher-spoiler').next().slideToggle(500)
+		$('.slick-slide .teacher-spoiler').hide(500)
 	})
 })
