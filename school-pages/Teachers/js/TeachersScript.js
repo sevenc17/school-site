@@ -110,6 +110,7 @@ for (var i = 0 ; i < contentWindowList.length; i++){
 $(function(){
 	$('.teachers-list').slick({
 		slidesToShow: 1,
+		infinite: false,
 	})
 })
 
@@ -132,7 +133,7 @@ $(function(){
 
 $(function(){
 	$('.slick-slide .teacher-spoiler').click(function(){
-		$('.slick-slide .teacher-spoiler').next().slideToggle(500)
-		$('.slick-slide .teacher-spoiler').hide(500)
+		$(this).next().slideToggle(500)
+		$(this).hide(500)
 	})
 })

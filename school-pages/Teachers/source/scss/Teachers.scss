@@ -302,7 +302,7 @@ body.__list-burger-active, body.__content__popup__active{
 
 .our-teachers {
 	margin: 0;
-	padding: 6% 6%;
+	padding: 6% 6% 10% 6%;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	background: linear-gradient(to right, #9F99FF, #80CCE8, #82FFB8);
@@ -343,12 +343,6 @@ body.__list-burger-active, body.__content__popup__active{
 			background: url('arrow-left.png') 0 0 / 100%;
 			left: -12%;
 		}
-	}
-	.teachers-kkk {
-		display: none;
-	}
-	.teachers-kkk.active-slider {
-		display: block
 	}
 	.menu-teachers {
 		list-style-type: none;
@@ -845,6 +839,24 @@ body.__list-burger-active, body.__content__popup__active{
 						padding: 0;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.our-teachers {
+		.teachers-list {
+			.slick-arrow {
+				top: 102%;
+				width: 9vw;
+				height: 9vw;
+			}
+			.slick-arrow.slick-prev {
+				left: 20%;
+			}
+			.slick-arrow.slick-next {
+				right: 20%;
 			}
 		}
 	}

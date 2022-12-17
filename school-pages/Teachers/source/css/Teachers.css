@@ -377,7 +377,7 @@ body.__list-burger-active, body.__content__popup__active {
 
 .our-teachers {
   margin: 0;
-  padding: 6% 6%;
+  padding: 6% 6% 10% 6%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background: -webkit-gradient(linear, left top, right top, from(#9F99FF), color-stop(#80CCE8), to(#82FFB8));
@@ -424,12 +424,6 @@ body.__list-burger-active, body.__content__popup__active {
 .our-teachers .teachers-list .slick-arrow.slick-prev {
   background: url("arrow-left.png") 0 0/100%;
   left: -12%;
-}
-.our-teachers .teachers-kkk {
-  display: none;
-}
-.our-teachers .teachers-kkk.active-slider {
-  display: block;
 }
 .our-teachers .menu-teachers {
   list-style-type: none;
@@ -1001,6 +995,19 @@ body.__list-burger-active, body.__content__popup__active {
   }
   .teachers__content .content.active__popup .content__popup .close__popup img {
     padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .our-teachers .teachers-list .slick-arrow {
+    top: 102%;
+    width: 9vw;
+    height: 9vw;
+  }
+  .our-teachers .teachers-list .slick-arrow.slick-prev {
+    left: 20%;
+  }
+  .our-teachers .teachers-list .slick-arrow.slick-next {
+    right: 20%;
   }
 }
 @media (max-height: 600px) {
