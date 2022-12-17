@@ -126,7 +126,7 @@ body.__list-burger-active, body.__content__popup__active{
 						top: 150%;
 						left: 0%;
 						border: 2px solid #fff;
-						background-color: #ccc;
+						background: linear-gradient(to right, #7E89D6,  #A990F5, #80B3EB);
 						z-index: 5;
 						li {
 							margin: 3% 0%;
@@ -136,7 +136,7 @@ body.__list-burger-active, body.__content__popup__active{
 				}
 				@media (min-width: 1000px) {
 					li:hover {
-						background-color: #a8abb7;
+						background-color: rgb(255, 255, 255, 0.2);
 						border-top-right-radius: 4px;
 						border-top-left-radius: 4px;
 					}
@@ -286,7 +286,7 @@ body.__list-burger-active, body.__content__popup__active{
 }
 
 .home__content {
-	background-color: #76c893;
+	background: linear-gradient(to left, #7E89D6,  #A990F5, #80B3EB);
 	margin: 0;
 	border: 0;
 	padding: 4% 0% 8% 0%;
@@ -349,7 +349,7 @@ body.__list-burger-active, body.__content__popup__active{
 			text-transform: uppercase;
 			font-size: calc(9px + 20 * (100vw / 1400));
 			a {
-				background-color: #5f9;
+				background-color: transparent;
 				max-width: 20vw;
 				margin: 0 auto;
 				padding: 2% 4%;

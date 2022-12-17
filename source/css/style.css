@@ -187,7 +187,8 @@ body.__list-burger-active, body.__content__popup__active {
   top: 150%;
   left: 0%;
   border: 2px solid #fff;
-  background-color: #ccc;
+  background: -webkit-gradient(linear, left top, right top, from(#7E89D6), color-stop(#A990F5), to(#80B3EB));
+  background: linear-gradient(to right, #7E89D6, #A990F5, #80B3EB);
   z-index: 5;
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
@@ -196,7 +197,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
-    background-color: #a8abb7;
+    background-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
   }
@@ -364,7 +365,8 @@ body.__list-burger-active, body.__content__popup__active {
 }
 
 .home__content {
-  background-color: #76c893;
+  background: -webkit-gradient(linear, right top, left top, from(#7E89D6), color-stop(#A990F5), to(#80B3EB));
+  background: linear-gradient(to left, #7E89D6, #A990F5, #80B3EB);
   margin: 0;
   border: 0;
   padding: 4% 0% 8% 0%;
@@ -380,7 +382,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .home__content .content .banner__school .home__content-slider .home__content-slider__item {
   text-align: center;
-  padding: 1% 1%;
+  padding: 0.5% 0.5%;
 }
 .home__content .content .banner__school .home__content-slider .home__content-slider__item img {
   max-width: 100%;
@@ -435,7 +437,7 @@ body.__list-burger-active, body.__content__popup__active {
   font-size: calc(9px + 1.4285714286vw);
 }
 .home__content .content .slide-about a {
-  background-color: #343a40;
+  background-color: transparent;
   max-width: 20vw;
   margin: 0 auto;
   padding: 2% 4%;
@@ -1051,6 +1053,9 @@ body.__list-burger-active, body.__content__popup__active {
     right: 10%;
     width: 5%;
     height: 3.5vw;
+  }
+  .home__content .content .title p {
+    max-width: 100%;
   }
   .home__content .content .banner__school {
     display: block;
