@@ -235,3 +235,31 @@ $(document).ready(function(){
 		$(this).closest('.spoiler').toggleClass('go')
 	})
 })
+
+
+// $(function(){
+// 	console.log($('.slider-icon img[src="images/icons/icon-slider4.png"]').attr('src', 'images/icons/icon-slider2.png'))
+// })
+
+// $(function(){
+// 	function newAttr(element, newAttr, value){
+// 		element.attr(newAttr, value)
+// 	}
+// 	newAttr($('.header'), 'href', 'fffffffff')
+// })
+
+// $(function(){
+// 	$('.header ul li').animate({
+// 		'font-size': '30px'
+// 	}, 3000)
+// })
+
+// $(function(){
+// 	$('.header ul li').each(function(){
+// 		$(this).slideUp(3000).slideDown(1000)
+// 	})
+// })
+
+// $(function(){
+// 	$('body').prepend($('.header').clone())
+// })
