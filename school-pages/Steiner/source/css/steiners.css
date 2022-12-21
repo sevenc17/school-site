@@ -317,6 +317,7 @@ body {
           animation-duration: 1.5s;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
+  padding: 0 0 5% 0;
 }
 .steiner-list img {
   max-width: 100%;
@@ -334,6 +335,24 @@ body {
   color: #da952d;
   text-shadow: 0px 0px 50px #fff;
   font-family: "TelidonRg Italic", sans-serif;
+}
+
+.steiner-head {
+  text-align: center;
+  padding: 5% 0;
+}
+
+.steiner-text {
+  color: #fff;
+  font-family: "Bitter";
+  text-shadow: 5px 5px 30px #fff;
+}
+.steiner-text h2 {
+  font-size: calc(10px + 1.4285714286vw);
+  padding: 0 0 2% 0;
+}
+.steiner-text p {
+  font-size: calc(10px + 0.7142857143vw);
 }
 
 @-webkit-keyframes scale-animation {

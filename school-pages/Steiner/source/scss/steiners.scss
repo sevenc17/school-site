@@ -233,6 +233,7 @@ body{
 	animation-name: scale-animation, translate-animation;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in;
+	padding: 0 0 5% 0;
 }
 
 .steiner-item {
@@ -248,6 +249,24 @@ body{
 	color: #da952d;
 	text-shadow: 0px 0px 50px  #fff;
 	font-family: 'TelidonRg Italic', sans-serif;
+}
+
+.steiner-head {
+	text-align: center;
+	padding: 5% 0;
+}
+
+.steiner-text {
+	color: #fff;
+	font-family: 'Bitter';
+	text-shadow: 5px 5px 30px #fff;
+	h2 {
+		font-size: calc(10px + 20 * (100vw / 1400));
+		padding: 0 0 2% 0;
+	}
+	p {
+		font-size: calc(10px + 10 * (100vw / 1400));
+	}
 }
 
 @keyframes scale-animation {
