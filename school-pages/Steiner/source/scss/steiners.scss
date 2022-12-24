@@ -229,10 +229,10 @@ body{
 		max-width: 100%;
 	}
 	animation-name: scale-animation, trem-animation;
-	animation-duration: 0.5s, 0.5s;
+	animation-duration: 0.5s, 0.35s;
 	animation-delay: 0s, 0.5s;
 	animation-timing-function: ease-in, cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	animation-iteration-count: 1, 7;
+	animation-iteration-count: 1, 15;
 	animation-direction: alternate;
 	padding: 0 0 5% 0;
 }
@@ -281,39 +281,39 @@ body{
 
 @keyframes trem-animation {
 	0%{
-		transform: translate(10px, 8px);
+		transform: translate(25px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	8%{
-		transform: translate(7px, 0px);
+		transform: translate(15px, 0px);
 		animation-timing-function: ease-in;
 	}
 	16%{
-		transform: translate(3px, 8px);
+		transform: translate(5px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	24%{
 		transform: translate(0px, 0px);
-		animation-timing-function: ease-in;
+		animation-timing-function: ease;
 	}
 	32%{
-		transform: translate(-3px, 8px);
+		transform: translate(-5px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	40%{
-		transform: translate(-7px, 0px);
+		transform: translate(-15px, 0px);
 		animation-timing-function: ease-in;
 	}
 	58%{
-		transform: translate(-10px, 8px);
+		transform: translate(-25px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	66%{
-		transform: translate(-7px, 0px);
-		animation-timing-function: ease-in;
+		transform: translate(-15px, 0px);
+		animation-timing-function: ease;
 	}
 	74%{
-		transform: translate(-3px, 8px);
+		transform: translate(-5px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	82%{
@@ -321,12 +321,12 @@ body{
 		animation-timing-function: ease-in;
 	}
 	90%{
-		transform: translate(10px, 8px);
+		transform: translate(5px, 20px);
 		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	100%{
-		transform: translate(0px, 0px);
-		animation-timing-function: ease-in;
+		transform: translate(10px, 0px);
+		animation-timing-function: ease;
 	}
 }
 
