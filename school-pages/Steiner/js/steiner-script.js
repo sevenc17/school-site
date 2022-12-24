@@ -35,7 +35,7 @@ const steinerList = $('.steiner-list')
 
 
 window.addEventListener('load', function(){
-	for (var i=0; i<50000; i++) {
+	for (var i=0; i<35000; i++) {
 		setTimeout(infinite, 200)
 	}
 	setTimeout(function() {
