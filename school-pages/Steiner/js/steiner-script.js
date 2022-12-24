@@ -32,8 +32,11 @@ function infinite(){
 
 const steiners = $('.steiner-number h2');
 
-document.addEventListener('DOMContentLoaded', function(){
+
+window.addEventListener('load', function(){
 	for (var i=0; i<50000; i++) {
 		setTimeout(infinite, 200)
 	}
 })
+
+
