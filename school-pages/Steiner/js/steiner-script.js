@@ -40,6 +40,6 @@ window.addEventListener('load', function(){
 	}
 	setTimeout(function() {
 		steinerList.css({'animation-iteration-count':'0'})
-	}, 2000)
+	}, 1500)
 })
 
