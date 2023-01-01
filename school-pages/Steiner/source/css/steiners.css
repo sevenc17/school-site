@@ -119,9 +119,6 @@ body {
   background-color: #343a40;
   border-bottom: 1px #000 solid;
   z-index: 4;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
 }
 .header .header__content {
   height: 120px;
@@ -176,7 +173,7 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0.5% 2%;
+  padding: 0.5% 1%;
   white-space: nowrap;
   list-style-type: none;
   position: relative;
@@ -213,7 +210,7 @@ body {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   position: absolute;
-  width: 150%;
+  padding: 0 5%;
   top: 150%;
   left: 0%;
   border: 2px solid #fff;
@@ -223,7 +220,7 @@ body {
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
   margin: 3% 0%;
-  padding: 2% 4%;
+  padding: 2% 1%;
 }
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
