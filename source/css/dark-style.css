@@ -84,7 +84,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 
 .header__wrapper {
-  padding: 0 15%;
+  padding: 0 5%;
 }
 
 .header {
@@ -146,7 +146,7 @@ body.__list-burger-active, body.__content__popup__active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0.5% 2%;
+  padding: 0.5% 1%;
   white-space: nowrap;
   list-style-type: none;
   position: relative;
@@ -183,7 +183,7 @@ body.__list-burger-active, body.__content__popup__active {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   position: absolute;
-  width: 150%;
+  padding: 0 5%;
   top: 150%;
   left: 0%;
   border: 2px solid #fff;
@@ -193,7 +193,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
   margin: 3% 0%;
-  padding: 2% 4%;
+  padding: 2% 1%;
 }
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
@@ -693,7 +693,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .tabs__button-list ul li {
   padding: 0.7% 2%;
-  background-color: #E5A291;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   font-size: calc(9px + 0.7142857143vw);
   cursor: pointer;
@@ -753,7 +753,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .block.active__popup .block__popup img {
   padding: 5vh 0 5% 0;
-  max-width: 40vh;
+  max-width: 30vw;
 }
 .places__school .block.active__popup .block__popup p {
   max-width: 70%;
@@ -945,27 +945,6 @@ body.__list-burger-active, body.__content__popup__active {
           transform: rotate(-3deg);
 }
 
-@-webkit-keyframes rotation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 .footer {
   height: 120px;
   background-color: #343a40;
@@ -1016,6 +995,27 @@ body.__list-burger-active, body.__content__popup__active {
   color: #fff;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /* Слайдер */
 /* Слайдер запущен */
 /* Слайдер с точками */
@@ -1204,10 +1204,10 @@ body.__list-burger-active, body.__content__popup__active {
   .header .header__menu .list-menu.list-menu-active .list li .list__sub-menu {
     top: 0;
     left: 40%;
-    width: 60%;
+    padding: 0 2%;
   }
   .header .header__menu .list-menu.list-menu-active .list li .list__sub-menu li {
-    padding: 2% 2%;
+    padding: 2% 1%;
   }
   .scroll-to-menu {
     width: 50px;
@@ -1313,21 +1313,65 @@ body.__list-burger-active, body.__content__popup__active {
     right: 2vw;
   }
 }
-@media (min-height: 605px) {
+@media (max-height: 605px) {
+  .places__school .block.active__popup .block__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .places__school .block.active__popup .block__popup .close__popup {
     position: absolute;
-    top: 0vh;
+    top: 5vw;
     right: 5vh;
   }
   .places__school .block.active__popup .block__popup .close__popup img {
     max-width: 8vw;
+    padding: 0;
   }
   .places__school .block.active__popup .block__popup img {
-    padding: 5vh 0 5% 0;
+    padding: 5vh 0 5% 10vw;
     max-width: 50vw;
+    max-height: 50vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .places__school .block.active__popup .block__popup p {
-    max-width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 40%;
+    margin: 0 auto;
+  }
+}
+@media (max-height: 400px) {
+  .places__school .block.active__popup .block__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places__school .block.active__popup .block__popup .close__popup {
+    position: absolute;
+    top: 5vw;
+    right: 5vh;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 8vw;
+    padding: 0;
+  }
+  .places__school .block.active__popup .block__popup img {
+    padding: 5vh 0 5% 10vw;
+    max-width: 40vw;
+    max-height: 40vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .places__school .block.active__popup .block__popup p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 40%;
     margin: 0 auto;
   }
 }

@@ -146,7 +146,7 @@ body.__list-burger-active, body.__content__popup__active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0.5% 2%;
+  padding: 0.5% 1%;
   white-space: nowrap;
   list-style-type: none;
   position: relative;
@@ -183,7 +183,7 @@ body.__list-burger-active, body.__content__popup__active {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   position: absolute;
-  width: 150%;
+  padding: 0 5%;
   top: 150%;
   left: 0%;
   border: 2px solid #fff;
@@ -193,7 +193,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .header .header__menu .list-menu .list li .list__sub-menu li {
   margin: 3% 0%;
-  padding: 2% 4%;
+  padding: 2% 1%;
 }
 @media (min-width: 1000px) {
   .header .header__menu .list-menu .list li:hover {
