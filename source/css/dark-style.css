@@ -750,10 +750,12 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .block.active__popup .block__popup .close__popup img {
   max-width: 8vw;
+  min-height: 100%;
 }
 .places__school .block.active__popup .block__popup img {
   padding: 5vh 0 5% 0;
   max-width: 30vw;
+  min-height: 30vw;
 }
 .places__school .block.active__popup .block__popup p {
   max-width: 70%;
@@ -1312,13 +1314,6 @@ body.__list-burger-active, body.__content__popup__active {
     top: 10vh;
     right: 2vw;
   }
-}
-@media (max-height: 605px) {
-  .places__school .block.active__popup .block__popup {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .places__school .block.active__popup .block__popup .close__popup {
     position: absolute;
     top: 5vw;
@@ -1329,9 +1324,30 @@ body.__list-burger-active, body.__content__popup__active {
     padding: 0;
   }
   .places__school .block.active__popup .block__popup img {
-    padding: 5vh 0 5% 10vw;
+    max-width: 60vw;
+    min-height: 45vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .places__school .block.active__popup .block__popup p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-height: 470px) {
+  .places__school .block.active__popup .block__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places__school .block.active__popup .block__popup img {
+    padding: 5vh 0 0 5vh;
     max-width: 50vw;
-    max-height: 50vw;
+    min-height: 35vw;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1340,39 +1356,6 @@ body.__list-burger-active, body.__content__popup__active {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    max-width: 40%;
-    margin: 0 auto;
-  }
-}
-@media (max-height: 400px) {
-  .places__school .block.active__popup .block__popup {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .places__school .block.active__popup .block__popup .close__popup {
-    position: absolute;
-    top: 5vw;
-    right: 5vh;
-  }
-  .places__school .block.active__popup .block__popup .close__popup img {
-    max-width: 8vw;
-    padding: 0;
-  }
-  .places__school .block.active__popup .block__popup img {
-    padding: 5vh 0 5% 10vw;
-    max-width: 40vw;
-    max-height: 40vw;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .places__school .block.active__popup .block__popup p {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    max-width: 40%;
-    margin: 0 auto;
   }
 }
 @media (max-width: 550px) {

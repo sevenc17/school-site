@@ -623,11 +623,13 @@ body.__list-burger-active, body.__content__popup__active{
 				right: 5vh;
 				img {
 					max-width: 8vw;
+					min-height: 100%;
 				}
 			}
 			img {
 				padding: 5vh 0 5% 0;
 				max-width: 30vw;
+				min-height: 30vw;
 			}
 			p {
 				max-width: 70%;
@@ -1154,6 +1156,8 @@ body.__list-burger-active, body.__content__popup__active{
 	}
 }
 
+
+
 @media (max-width: 700px) {
 	.scroll-to-menu {
 		width: 40px;
@@ -1165,13 +1169,9 @@ body.__list-burger-active, body.__content__popup__active{
 		top: 10vh;
 		right: 2vw;
 	}
-}
-
-@media (max-height: 605px){
 	.places__school {
 		.block.active__popup {
 			.block__popup {
-				display: flex;
 				.close__popup {
 					position: absolute;
 					top: 5vw;
@@ -1182,49 +1182,37 @@ body.__list-burger-active, body.__content__popup__active{
 					}
 				}
 				img {
-					padding: 5vh 0 5% 10vw;
+					max-width: 60vw;
+					min-height: 45vw;
+					align-self: center;
+				}
+				p {
+					align-self: center;
+					max-width: 80%;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 470px) {
+	.places__school {
+		.block.active__popup {
+			.block__popup {
+				display: flex;
+				img {
+					padding: 5vh 0 0 5vh;
 					max-width: 50vw;
-					max-height: 50vw;
+					min-height: 35vw;
 					align-self: center;
 				}
 				p {
 					align-self: center;
-					max-width: 40%;
-					margin: 0 auto;
 				}
 			}
 		}
-	}	
-}
-
-@media (max-height: 400px){
-	.places__school {
-		.block.active__popup {
-			.block__popup {
-				display: flex;
-				.close__popup {
-					position: absolute;
-					top: 5vw;
-					right: 5vh;
-					img {
-						max-width: 8vw;
-						padding: 0;
-					}
-				}
-				img {
-					padding: 5vh 0 5% 10vw;
-					max-width: 40vw;
-					max-height: 40vw;
-					align-self: center
-				}
-				p {
-					align-self: center;
-					max-width: 40%;
-					margin: 0 auto;
-				}
-			}
-		}
-	}	
+	}
 }
 
 @media (max-width: 550px) {
