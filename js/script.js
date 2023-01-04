@@ -3,15 +3,15 @@
 
 //Проверка темной темы
 
-function isDarkModeEnabled() {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-}
+// function isDarkModeEnabled() {
+//     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+// }
 
-const whiteStyle = document.getElementById('white-style')
+// const whiteStyle = document.getElementById('white-style')
 
-if (isDarkModeEnabled()){
-	whiteStyle.href = "source/css/dark-style.css"
-}
+// if (isDarkModeEnabled()){
+// 	whiteStyle.href = "source/css/dark-style.css"
+// }
 
 
 let mediaQuery1 = window.matchMedia('(max-width: 1350px)');
@@ -228,7 +228,6 @@ for (var i = 0 ; i < blocksList.length; i++){
 
 }
 
-
 $(document).ready(function(){
 	$('.spoiler-open').click(function(event){
 		$(this).toggleClass('active').next().slideToggle(500);
@@ -236,30 +235,41 @@ $(document).ready(function(){
 	})
 })
 
+// alert(new Date().getMinutes())
 
-// $(function(){
-// 	console.log($('.slider-icon img[src="images/icons/icon-slider4.png"]').attr('src', 'images/icons/icon-slider2.png'))
-// })
+// document.addEventListener('DOMContentLoaded', function(){
+// 	const form = document.getElementById('form');
+// 	form.addEventListener('submit', formSend);
 
-// $(function(){
-// 	function newAttr(element, newAttr, value){
-// 		element.attr(newAttr, value)
+// 	async function formSend(e){
+// 		e.preventDefault();
+
+// 		let error = formValidate(form);
 // 	}
-// 	newAttr($('.header'), 'href', 'fffffffff')
-// })
 
-// $(function(){
-// 	$('.header ul li').animate({
-// 		'font-size': '30px'
-// 	}, 3000)
-// })
+// 	function formValidate(form){
+// 		let error = 0;
+// 		let formReg = document.querySelectorAll('._reg')
 
-// $(function(){
-// 	$('.header ul li').each(function(){
-// 		$(this).slideUp(3000).slideDown(1000)
-// 	})
-// })
+// 		for(let index = 0;formReg.length; index++){
+// 			const input = formReg[index];
+// 			formRemoveError(input);
 
-// $(function(){
-// 	$('body').prepend($('.header').clone())
-// })
+// 			if (input.classList.contains('_email'))
+// 		}
+
+// 		function formAddError(input) {
+// 			input.parentElement.classList.add('_error')
+// 			input.classList.add('_error');
+// 		}
+
+// 		function formRemoveError(input) {
+// 			input.parentElement.classList.remove('_error')
+// 			input.classList.remove('_error');
+// 		}
+
+// 		// function emailTest(input) {
+// 		// 	return !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(input.value)
+// 		// }
+// 	}
+// });
