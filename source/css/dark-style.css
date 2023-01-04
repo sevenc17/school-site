@@ -753,7 +753,7 @@ body.__list-burger-active, body.__content__popup__active {
   min-height: 100%;
 }
 .places__school .block.active__popup .block__popup img {
-  padding: 5vh 0 5% 0;
+  padding: 30vh 0 5% 0;
   max-width: 30vw;
   min-height: 30vw;
 }
@@ -1356,6 +1356,7 @@ body.__list-burger-active, body.__content__popup__active {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    max-width: 45%;
   }
 }
 @media (max-width: 550px) {
