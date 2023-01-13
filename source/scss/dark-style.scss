@@ -619,7 +619,7 @@ body.__list-burger-active, body.__content__popup__active{
 			line-height: 1.5;
 			.close__popup {
 				position: absolute;
-				top: 5vh;
+				top: -20vh;
 				right: 5vh;
 				img {
 					max-width: 8vw;
@@ -628,7 +628,7 @@ body.__list-burger-active, body.__content__popup__active{
 			}
 			img {
 				padding: 30vh 0 5% 0;
-				max-width: 30vw;
+				max-width: 40vw;
 				min-height: 30vw;
 			}
 			p {
@@ -1210,6 +1210,11 @@ body.__list-burger-active, body.__content__popup__active{
 				p {
 					align-self: center;
 					max-width: 45%;
+				}
+				.close__popup {
+					img {
+						max-width: 6vw;
+					}
 				}
 			}
 		}

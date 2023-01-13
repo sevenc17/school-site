@@ -745,7 +745,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .block.active__popup .block__popup .close__popup {
   position: absolute;
-  top: 5vh;
+  top: -20vh;
   right: 5vh;
 }
 .places__school .block.active__popup .block__popup .close__popup img {
@@ -754,7 +754,7 @@ body.__list-burger-active, body.__content__popup__active {
 }
 .places__school .block.active__popup .block__popup img {
   padding: 30vh 0 5% 0;
-  max-width: 30vw;
+  max-width: 40vw;
   min-height: 30vw;
 }
 .places__school .block.active__popup .block__popup p {
@@ -1357,6 +1357,9 @@ body.__list-burger-active, body.__content__popup__active {
         -ms-grid-row-align: center;
         align-self: center;
     max-width: 45%;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 6vw;
   }
 }
 @media (max-width: 550px) {
