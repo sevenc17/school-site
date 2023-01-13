@@ -235,6 +235,14 @@ $(document).ready(function(){
 	})
 })
 
+function initMap(){
+	var options = {
+		center: {lat: 55.80994311391446, lng: 49.187767411869814},
+		zoom: 18
+	}
+	const map = new google.maps.Map(document.getElementById("map"), options);
+}
+
 // alert(new Date().getMinutes())
 
 // document.addEventListener('DOMContentLoaded', function(){
