@@ -947,15 +947,23 @@ body.__list-burger-active, body.__content__popup__active {
           transform: rotate(-3deg);
 }
 
-.footer {
-  height: 120px;
+footer {
   background-color: #343a40;
   margin-top: 5%;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  padding: 5% 0 0 0;
 }
-.footer .home__wrapper {
+footer #map {
+  width: 100%;
+  height: 350px;
+  margin: 30px 0;
+  border: 4px #fff solid;
+  -webkit-box-shadow: 0px 0px 30px #fff;
+          box-shadow: 0px 0px 30px #fff;
+}
+footer .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -963,22 +971,23 @@ body.__list-burger-active, body.__content__popup__active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  padding: 0 0 5% 0;
 }
-.footer .footer-icon {
+footer .footer-icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
-.footer .footer-icon img {
+footer .footer-icon img {
   max-width: 70%;
 }
-.footer .footer-info {
+footer .footer-info {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   height: 100%;
 }
-.footer .contacts {
+footer .contacts {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,7 +1000,7 @@ body.__list-burger-active, body.__content__popup__active {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.footer .contact {
+footer .contact {
   font-family: "Bitter", sans-serif;
   font-size: calc(9px + 0.7142857143vw);
   color: #fff;
@@ -1301,6 +1310,22 @@ body.__list-burger-active, body.__content__popup__active {
   }
   .home-slider .slider .slider-item .slider-text p {
     font-size: calc(6px + 0.2857142857vw);
+  }
+  footer #map {
+    height: 250px;
+  }
+  footer .title {
+    font-size: calc(11px + 1.4285714286vw);
+  }
+  footer .title h2::before, footer .title h2::after {
+    width: 5vw;
+    height: 5vw;
+  }
+  footer .title h2::before {
+    left: 10%;
+  }
+  footer .title h2::after {
+    right: 10%;
   }
 }
 @media (max-width: 700px) {
