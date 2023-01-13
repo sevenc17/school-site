@@ -669,8 +669,8 @@ body.__list-burger-active, body.__content__popup__active {
   max-width: 8vw;
 }
 .teachers__content .content.active__popup .content__popup img {
-  padding: 2vw 0 5% 0;
-  max-width: 30vh;
+  padding: 5vw 0 5% 0;
+  max-width: 50vh;
 }
 .teachers__content .content.active__popup .content__popup p {
   max-width: 70%;
@@ -959,6 +959,21 @@ body.__list-burger-active, body.__content__popup__active {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 25%;
   }
+  .teachers__content .content.active__popup .content__popup {
+    font-size: calc(9px + 1.4285714286vw);
+  }
+  .teachers__content .content.active__popup .content__popup img {
+    padding: 5vh 0 5% 0;
+    max-width: 50vw;
+  }
+  .teachers__content .content.active__popup .content__popup .close__popup {
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+  }
+  .teachers__content .content.active__popup .content__popup .close__popup img {
+    max-width: 8vw;
+  }
 }
 @media (max-width: 700px) {
   .scroll-to-menu {
@@ -1013,18 +1028,23 @@ body.__list-burger-active, body.__content__popup__active {
 }
 @media (max-height: 600px) {
   .teachers__content .content.active__popup .content__popup {
-    line-height: 1;
+    font-size: calc(9px + 1.4285714286vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .teachers__content .content.active__popup .content__popup img {
-    max-width: 30vw;
+    padding: 5vh 0 5% 5vw;
+    max-width: 35vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
-  .teachers__content .content.active__popup .content__popup .close__popup img {
-    padding: 0;
-  }
-}
-@media (min-height: 605px) {
-  .teachers__content .content.active__popup .content__popup {
-    font-size: calc(9px + 1.4285714286vw);
+  .teachers__content .content.active__popup .content__popup p {
+    max-width: 45%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .teachers__content .content.active__popup .content__popup .close__popup {
     position: absolute;
@@ -1032,14 +1052,6 @@ body.__list-burger-active, body.__content__popup__active {
     right: 5vh;
   }
   .teachers__content .content.active__popup .content__popup .close__popup img {
-    max-width: 8vw;
-  }
-  .teachers__content .content.active__popup .content__popup img {
-    padding: 5vh 0 5% 0;
-    max-width: 50vw;
-  }
-  .teachers__content .content.active__popup .content__popup p {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 11vw;
   }
 }
