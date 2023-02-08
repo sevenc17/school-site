@@ -732,6 +732,8 @@ body.__list-burger-active, body.__content__popup__active {
   position: fixed;
   width: 100%;
   height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 10%;
   text-align: center;
   top: 0;
   left: 0;
@@ -755,7 +757,7 @@ body.__list-burger-active, body.__content__popup__active {
 .places__school .block.active__popup .block__popup img {
   padding: 30vh 0 5% 0;
   max-width: 40vw;
-  min-height: 30vw;
+  min-height: 40vw;
 }
 .places__school .block.active__popup .block__popup p {
   max-width: 70%;
@@ -793,6 +795,25 @@ body.__list-burger-active, body.__content__popup__active {
 .places__school .block-info p {
   font-weight: 600;
   padding: 7% 5% 5% 5%;
+  height: 150px;
+  overflow-y: auto;
+}
+.places__school .block-info p::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+.places__school .block-info p::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 4px;
+}
+.places__school .block-info p::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+.places__school .block-info p {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #000;
 }
 .places__school .block-info .block-info-img {
   position: relative;
@@ -1041,6 +1062,16 @@ footer .contact {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+@media (min-width: 1200px) {
+  .places__school .block-info {
+    -ms-grid-rows: auto minmax(50px, 80px) 1fr;
+    grid-template-rows: auto minmax(50px, 80px) 1fr;
+  }
+  .places__school .block-info h2 {
+    height: 80px;
+    margin-bottom: 4%;
+  }
+}
 @media (min-width: 1000px) {
   .scroll-to-menu {
     width: 75px;
@@ -1117,6 +1148,22 @@ footer .contact {
   .home-slider .slider .slick-arrow {
     width: 9.5%;
     height: 24%;
+  }
+  .places__school .block.active__popup .block__popup img {
+    max-width: 60vw;
+    min-height: 35vw;
+  }
+  .places__school .block.active__popup .block__popup p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 80%;
+  }
+  .places__school .block.active__popup .block__popup .close__popup {
+    top: 0vh;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 12vw;
   }
 }
 @media (max-width: 768px) {
@@ -1363,6 +1410,60 @@ footer .contact {
     margin: 0 auto;
   }
 }
+@media (max-height: 600px) and (max-width: 1024px) {
+  .places__school .block.active__popup .block__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places__school .block.active__popup .block__popup img {
+    padding: 0vh 0 0 5vh;
+    max-width: 50vw;
+    min-height: 35vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .places__school .block.active__popup .block__popup p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 45%;
+  }
+  .places__school .block.active__popup .block__popup .close__popup {
+    top: 10vh;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 720px) and (max-height: 540px) {
+  .places__school .block.active__popup .block__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places__school .block.active__popup .block__popup img {
+    padding: 0vh 0 0 5vh;
+    max-width: 50vw;
+    min-height: 35vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .places__school .block.active__popup .block__popup p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 45%;
+  }
+  .places__school .block.active__popup .block__popup .close__popup {
+    top: 10vh;
+  }
+  .places__school .block.active__popup .block__popup .close__popup img {
+    max-width: 12vw;
+  }
+}
 @media (max-height: 470px) {
   .places__school .block.active__popup .block__popup {
     display: -webkit-box;
@@ -1383,8 +1484,11 @@ footer .contact {
         align-self: center;
     max-width: 45%;
   }
+  .places__school .block.active__popup .block__popup .close__popup {
+    top: 5vh;
+  }
   .places__school .block.active__popup .block__popup .close__popup img {
-    max-width: 6vw;
+    max-width: 8vw;
   }
 }
 @media (max-width: 550px) {
